@@ -14,8 +14,7 @@ int main()
 { 	//player stats
 	int health = 100;//player health
 	int steeld = rand() % 5 + 1;//first weapon
-	float noshield = rand() % .95 + .93; //the starting no shield
-	int buckler = 3;//first shield
+	int noshield = rand() % 4 + 1; //the starting no shield
 	
 	//interaction
 	string i1 = "0";//first interaction
@@ -26,11 +25,11 @@ int main()
 	//enemy damage
 	int d1 = rand() % 5 + 3;//Slime(1)
 	
-		
 
 	//enemy health
 	int h1 = 10;
 	
+	//defend variable
 
 
 
@@ -63,7 +62,7 @@ sleep(2);
 
 cout << "You get up and look around to find a path illuminated by torches." << endl;
 sleep(2);
-cout << "Hopefully this will lead me out." << endl;
+cout << "\"Hopefully this will lead me out.\"" << endl;
 sleep(2);
 cout << "As you head down the path you come across a slimy beast!" << endl;
  
@@ -71,6 +70,7 @@ cout << "As you head down the path you come across a slimy beast!" << endl;
   while (h1 >= 1) {
   	cout << "What would you like to do?" << endl;
   	cout << "1.Attack!\n2.Defend!" << endl;
+  	cout << "It has " << h1 << " health left." << endl;
   	cin >> choice;
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -82,12 +82,12 @@ cout << "As you head down the path you come across a slimy beast!" << endl;
   	
   		//start defend
   		else {
-  		cout << "You take " << d1 * noshield<< " damage!" << endl;
-  		health - (d1 * noshield);
-  		 
-  		//end defend
+  		health -= (d1 - noshield); 
+  		cout << "You take " << d1 - noshield<< " damage!" << endl;
+  		}//end defend
   	}//end fight
   
+cout << "You managed to slay the beast!"  
   
 
 }//ends life statement
