@@ -18,6 +18,7 @@ int main()
 	
 	//interaction
 	string i1 = "0";//first interaction
+	string choice = "0";//variable for choices
 
 
 
@@ -27,7 +28,7 @@ int main()
 		
 
 	//enemy health
-	int h1 = 10
+	int h1 = 10;
 	
 
 
@@ -44,7 +45,7 @@ sleep(2);
 cout << "It seems to be a note." << endl;
 sleep(2);
 
-if (heath >=1){//makes sure it ends when you die
+if (health >=1){//makes sure it ends when you die
 
 cout << "Pick it up(y/n)?" << endl;//note interaction
 cin >> i1;
@@ -54,24 +55,31 @@ cin >> i1;
 	cout << "It says one thing..." << endl;
 	sleep(2);
 	cout << "\nSurvive." << endl;
-    }
+    	}
 	else {
 	cout << "\"Must be nothing.\"" << endl;    
-    }
+    	}
 sleep(2);
 
-cout << "You get up andlook around, and find a path illuminated by torches." << endl;
+cout << "You get up and look around to find a path illuminated by torches." << endl;
 sleep(2);
 cout << "Hopefully this will lead me out." << endl;
+sleep(2);
+cout << "As you head down the path you come across a slimy beast!" << endl;
  
 //Slime battle   
+  while (h1 >= 1) {
+  cout << "What would you like to do?" << endl;
+  cout << "1.Attack!\n 2.Defend!" << endl;
+  cin >> choice;
   
+  	}
   
   
 
 }//ends life statement
 else {//starts death statement
-cout << "Game over, you suffered a horrific bloody end" << endl;
+cout << "Game over, you suffered a horrific bloody end." << endl;
 }//ends death statement
 return 0;            
 }
