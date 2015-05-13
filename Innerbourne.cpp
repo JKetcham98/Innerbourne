@@ -42,21 +42,19 @@ cout << "You find a steel dagger on the ground along with a tattered scrap of pa
 sleep(2);
 cout << "It seems to be a note." << endl;
 sleep(2);
+
+
+
 cout << "Pick it up?" << endl;
-
-
-
-if (i1 == "y" || i1 == "yes" || i1 == "Yes" || i1 == "Y" ) {
-cout << "You read the note." << endl;
-sleep(2);
-cout << "It says one thing..." << endl;
-sleep(2);
-cout << "\nSurvive." << endl;
- 
+cin >> i1;
+	if (i1 == "y" || i1 == "yes" || i1 == "Yes" || i1 == "Y" ) {
+	cout << "You read the note." << endl;
+	sleep(2);
+	cout << "It says one thing..." << endl;
+	sleep(2);
+	cout << "\nSurvive." << endl;
     }
-    
-
-else {
+	else {
 	cout << "\"Must be nothing.\"" << endl;    
     }
   
