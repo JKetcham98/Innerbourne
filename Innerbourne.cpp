@@ -17,7 +17,7 @@ int main()
 	
 	
 	//interaction
-	string i1;//first interaction
+	string i1 = 0;//first interaction
 
 
 
