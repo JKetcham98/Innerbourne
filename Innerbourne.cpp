@@ -13,6 +13,7 @@ using namespace std;
 int main() 
 { 	//player stats
 	int health = 100;//player health
+	srand(time(NULL));//so RNG does not repeat the same number 
 	int steeld = rand() % 5 + 1;//first weapon
 	int noshield = rand() % 4 + 1; //the starting no shield
 	
@@ -58,20 +59,23 @@ cin >> i1;
 	else {
 	cout << "\"Must be nothing.\"" << endl;    
     	}
-sleep(2);
+	sleep(2);
 
 cout << "You get up and look around to find a path illuminated by torches." << endl;
 sleep(2);
 cout << "\"Hopefully this will lead me out.\"" << endl;
 sleep(2);
 cout << "As you head down the path you come across a slimy beast!" << endl;
- 
+sleep(2);
+
 //Slime battle   
   while (h1 >= 1) {
   	cout << "What would you like to do?" << endl;
   	cout << "1.Attack!\n2.Defend!" << endl;
-  	cout << "It has " << h1 << " health left." << endl;
+  	cout << "You have " << health << " health." << endl;
+  	cout << "It has " << h1 << " health." << endl;
   	cin >> choice;
+  	
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
   		cout << "\nYou deal " << steeld << " damage!" << endl;//damage dealt statement
@@ -85,9 +89,10 @@ cout << "As you head down the path you come across a slimy beast!" << endl;
   		health -= (d1 - noshield); 
   		cout << "You take " << d1 - noshield<< " damage!" << endl;
   		}//end defend
+  	sleep(2);
   	}//end fight
   
-cout << "You managed to slay the beast!"  
+cout << "You managed to slay the beast!" << endl;
   
 
 }//ends life statement
