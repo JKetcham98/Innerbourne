@@ -18,7 +18,7 @@ int main()
 	int steeld = rand() %5 + 1;//first weapon
 	srand(time(NULL));
 	int noshield = rand() %3 + 1; //the starting no shield
-	srand(time(NULL));
+	
 	
 	
 	//interaction
@@ -28,6 +28,7 @@ int main()
 
 
 	//enemy damage
+	srand(time(NULL));
 	int d1 = rand() %5 + 3;//Slime(1)
 	
 
