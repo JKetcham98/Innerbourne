@@ -8,6 +8,8 @@
 #include <cstdlib> // for RNG
 #include <string> // for string
 #include <unistd.h> //for sleep on mac
+#include <time.h>  // for null
+#include <stdio.h> //for time
 using namespace std;
 
 
