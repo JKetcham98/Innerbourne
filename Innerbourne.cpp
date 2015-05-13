@@ -11,6 +11,16 @@ using namespace std;
 
 int main() 
 { 
+	int health = 100;
+	int e1 = v2 = rand() % 100 + 1;//Goblin
+	
+		
+
+
+
+
+
+
 cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa." << endl;
 sleep(3);
 cout << "\nYou wake up in a cold damp dungeon." << endl;
