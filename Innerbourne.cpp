@@ -15,9 +15,9 @@ int main()
 { 	//player stats
 	int health = 100;//player health
 	srand(time(NULL));//so RNG does not repeat the same number 
-	int steeld = rand() % 5 + 1;//first weapon
+	int steeld = rand() %5 + 1;//first weapon
 	srand(time(NULL));
-	int noshield = rand() % 3 + 1; //the starting no shield
+	int noshield = rand() %3 + 1; //the starting no shield
 	srand(time(NULL));
 	
 	
@@ -28,7 +28,7 @@ int main()
 
 
 	//enemy damage
-	int d1 = rand() % 5 + 3;//Slime(1)
+	int d1 = rand() %5 + 3;//Slime(1)
 	
 
 	//enemy health
