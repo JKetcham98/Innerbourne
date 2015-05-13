@@ -16,10 +16,8 @@ using namespace std;
 int main() 
 { 	//player stats
 	int health = 100;//player health
-	srand(time(NULL));//so RNG does not repeat the same number 
-	int steeld = rand() %5 + 1;//first weapon
-	srand(time(NULL));
-	int noshield = rand() %3 + 1; //the starting no shield
+	
+	
 	
 	
 	
@@ -28,17 +26,11 @@ int main()
 	string choice = "0";//variable for choices
 
 
-
-	//enemy damage
-	srand(time(NULL));
-	int d1 = rand() %5 + 3;//Slime(1)
 	
 
 	//enemy health
 	int h1 = 10;
 	
-	//defend variable
-
 
 
 cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa." << endl;
@@ -82,6 +74,14 @@ sleep(2);
   	cout << "You have " << health << " health." << endl;
   	cout << "It has " << h1 << " health." << endl;
   	cin >> choice;
+  	//character stats
+  	srand(time(NULL));
+	int noshield = rand() %3 + 1; //the starting no shield
+	srand(time(NULL));//so RNG does not repeat the same number 
+	int steeld = rand() %5 + 1;//first weapon
+	//enemy damage
+	srand(time(NULL));
+	int d1 = rand() %5 + 3;//Slime(1)
   	
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
