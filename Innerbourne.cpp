@@ -7,6 +7,7 @@
 #include <stdlib.h> // for waiting
 #include <cstdlib> // for RNG
 #include <string> // for string
+#include <unistd.h> //for sleep on mac
 using namespace std;
 
 
