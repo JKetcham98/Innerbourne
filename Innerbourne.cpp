@@ -5,6 +5,7 @@
 #include <iostream>
 #include <math.h>
 #include <stdlib.h>
+#include <cstdlib> // for RNG
 using namespace std;
 
 
