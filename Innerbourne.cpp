@@ -37,7 +37,7 @@ int main()
 
 cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa." << endl;
 sleep(3);
-cout << "\nYou wake up in a cold damp dungeon." << endl;
+cout << "\nYou wake up in a cold, damp crypt." << endl;
 sleep(2);
 cout << "You find a steel dagger on the ground along with a tattered scrap of paper..." << endl;
 sleep(2);
@@ -58,11 +58,13 @@ cin >> i1;
 	else {
 	cout << "\"Must be nothing.\"" << endl;    
     }
-  
-//Slime battle
-  
-  
-  
+sleep(2);
+
+cout << "You get up andlook around, and find a path illuminated by torches." << endl;
+sleep(2);
+cout << "Hopefully this will lead me out." << endl;
+ 
+//Slime battle   
   
   
   
