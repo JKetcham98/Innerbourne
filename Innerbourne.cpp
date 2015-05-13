@@ -10,8 +10,12 @@ using namespace std;
 
 
 int main() 
-{ 
+{ 	//player stats
 	int health = 100;
+	
+	
+	
+	//enemy stats
 	int e1 = v2 = rand() % 100 + 1;//Goblin
 	
 		
