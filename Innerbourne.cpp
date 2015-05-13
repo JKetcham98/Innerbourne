@@ -21,12 +21,13 @@ int main()
 
 
 
-	//enemy stats
-	int e1 = rand() % 100 + 1;//Goblin
+	//enemy damage
+	int d1 = rand() % 5 + 1;//Slime(1)
 	
 		
 
-
+	//enemy health
+	int h1 = 10
 	
 
 
@@ -43,9 +44,9 @@ sleep(2);
 cout << "It seems to be a note." << endl;
 sleep(2);
 
+if (heath >=1){//makes sure it ends when you die
 
-
-cout << "Pick it up(y/n)?" << endl;
+cout << "Pick it up(y/n)?" << endl;//note interaction
 cin >> i1;
 	if (i1 == "y" || i1 == "yes" || i1 == "Yes" || i1 == "Y" ) {
 	cout << "You read the note." << endl;
@@ -58,13 +59,17 @@ cin >> i1;
 	cout << "\"Must be nothing.\"" << endl;    
     }
   
+//Slime battle
   
   
   
   
   
   
-  
-        
+
+}//ends life statement
+else {//starts death statement
+cout << "Game over, you suffered a horrific bloody end" << endl;
+}//ends death statement
 return 0;            
 }
