@@ -3,9 +3,10 @@
 //Description: A text based adventure game
 //may 12 2015
 #include <iostream>
-#include <math.h>
-#include <stdlib.h>
+#include <math.h> //for more math functions
+#include <stdlib.h> // for waiting
 #include <cstdlib> // for RNG
+#include <string> // for string
 using namespace std;
 
 
@@ -15,6 +16,11 @@ int main()
 	
 	
 	
+	//interaction
+	string i1;//first interaction
+
+
+
 	//enemy stats
 	int e1 = rand() % 100 + 1;//Goblin
 	
@@ -36,21 +42,31 @@ cout << "You find a steel dagger on the ground along with a tattered scrap of pa
 sleep(2);
 cout << "It seems to be a note." << endl;
 sleep(2);
+cout << "Pick it up?" << endl;
+
+
+
+if (i1 == y || i1 == yes || i1 == Yes || i1 == Y ) {
 cout << "You read the note." << endl;
 sleep(2);
 cout << "It says one thing..." << endl;
 sleep(2);
 cout << "\nSurvive." << endl;
-sleep(2);//intro
+ 
+    }
+    
 
-
-
-
-
-
+else {
+	cout << "\"Must be nothing.\"" << endl;    
+    }
   
- 
- 
-            
+  
+  
+  
+  
+  
+  
+  
+        
 return 0;            
 }
