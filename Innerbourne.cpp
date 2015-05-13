@@ -45,7 +45,7 @@ sleep(2);
 
 
 
-cout << "Pick it up?" << endl;
+cout << "Pick it up(y/n)?" << endl;
 cin >> i1;
 	if (i1 == "y" || i1 == "yes" || i1 == "Yes" || i1 == "Y" ) {
 	cout << "You read the note." << endl;
