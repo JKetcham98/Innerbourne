@@ -17,7 +17,7 @@ int main()
 	
 	
 	//interaction
-	string i1 = 0;//first interaction
+	string i1 = "0";//first interaction
 
 
 
@@ -46,7 +46,7 @@ cout << "Pick it up?" << endl;
 
 
 
-if (i1 == y || i1 == yes || i1 == Yes || i1 == Y ) {
+if (i1 == "y" || i1 == "yes" || i1 == "Yes" || i1 == "Y" ) {
 cout << "You read the note." << endl;
 sleep(2);
 cout << "It says one thing..." << endl;
