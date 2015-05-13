@@ -16,7 +16,10 @@ int main()
 	int health = 100;//player health
 	srand(time(NULL));//so RNG does not repeat the same number 
 	int steeld = rand() % 5 + 1;//first weapon
-	int noshield = rand() % 4 + 1; //the starting no shield
+	srand(time(NULL));
+	int noshield = rand() % 3 + 1; //the starting no shield
+	srand(time(NULL));
+	
 	
 	//interaction
 	string i1 = "0";//first interaction
@@ -88,7 +91,7 @@ sleep(2);
   		//start defend
   		else {
   		health -= (d1 - noshield); 
-  		cout << "You take " << d1 - noshield<< " damage!" << endl;
+  		cout << "You defend and take " << d1 - noshield<< " damage!" << endl;
   		}//end defend
   	sleep(2);
   	}//end fight
