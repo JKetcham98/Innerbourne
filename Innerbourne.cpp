@@ -27,7 +27,7 @@ int main()
 		
 
 
-	int e1 = v2 = rand() % 100 + 1;//Goblin
+	
 
 
 
