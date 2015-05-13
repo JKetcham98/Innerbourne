@@ -1,6 +1,6 @@
 //Title: final.cpp
-//Author: Joshua Ketcham
-//Description: A adventure game
+//Author: Joshua Ketcham & Vageesha Dharmadasa
+//Description: A text based adventure game
 //may 12 2015
 #include <iostream>
 #include <math.h>
