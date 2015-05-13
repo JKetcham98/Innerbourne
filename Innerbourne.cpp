@@ -12,8 +12,8 @@ using namespace std;
 
 int main() 
 { 	//player stats
-	int health = 100;
-	
+	int health = 100;//player health
+	int steeld = rand() % 5 + 1;//steel dagger
 	
 	
 	//interaction
@@ -30,9 +30,6 @@ int main()
 	//enemy health
 	int h1 = 10;
 	
-
-
-
 
 
 
@@ -69,11 +66,19 @@ cout << "As you head down the path you come across a slimy beast!" << endl;
  
 //Slime battle   
   while (h1 >= 1) {
-  cout << "What would you like to do?" << endl;
-  cout << "1.Attack!\n 2.Defend!" << endl;
-  cin >> choice;
-  
-  	}
+  	cout << "What would you like to do?" << endl;
+  	cout << "1.Attack!\n2.Defend!" << endl;
+  	cin >> choice;
+  		//start attack
+  		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
+  		cout << "\nYou deal " h1 - steeld << " damage!" << endl;
+  		cout << "You take " << d1 << " damage!" << endl;
+  		}//end attack
+  	
+  		//start defend
+  		
+  		//end defend
+  	}//end fight
   
   
 
