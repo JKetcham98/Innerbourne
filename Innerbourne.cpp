@@ -474,18 +474,19 @@ cin >> choice;
   				health -= d4;
   		
   				sleep(2);
-  			}
+  			} // end giant slime fight
 		cout << "The giant slime disintegrates, leaving behind a sword, probably from \none of it's past victims" << endl;
 		sleep(2);
 		cout << "Pick it up?(y/n)" << endl; 
 		cin >> i3;
 			if (i3 == "y" || i3 == "yes" || i3 == "Yes" || i3 == "Y" ) {	
+				basedmg += lsword;
 				cout << "You pick it up." << endl;
 				sleep(2);
 				cout << "The blade makes you feel more powerful" << endl;
 				sleep(1);
 				cout << "*damage has been increased!*" << endl;
-			}
+				}
 			else {
 				cout << "\"I think i'll stick with my trusty steel dagger for now.\"" << endl;
 			}
