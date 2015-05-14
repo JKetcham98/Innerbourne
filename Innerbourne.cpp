@@ -25,14 +25,21 @@ int main()
 	//interaction
 	string i1 = "0";//first interaction
 	string choice = "0";//variable for choices
+	string i2 = "0";//second interaction
+	string i3 = "0";//third
 
-
+	//swords
+	int sword = 0;//steel sword
 	
 
+	
+	
+	
 	//enemy health
 	int h1 = 10;//slime
 	int h2 = 25;//goblin
 	int h3 = 10;//skeleton
+	int h4 = 30;//giant slime
 
 cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa.(turn on your sound)\n" << endl;
 sleep(3);
@@ -176,11 +183,11 @@ cout << "As you travel down the tunnel the path splits." << endl;
 cout << "Would you like to go left or right(l/r)?" << endl;
 cin >> choice;
 
-//start tunnel split
-//left
-if (choice == "left" || choice == "l" || choice == "Left" || choice == "left." || choice == "Left."){
-//Goblin battle   
-  while (h1 >= 1) {
+	//start tunnel split
+	//left
+	if (choice == "left" || choice == "l" || choice == "Left" || choice == "left." || choice == "Left."){
+	//Goblin battle   
+  	while (h2 >= 1) {
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h2 << " health.\n" << endl;
   	
@@ -257,12 +264,12 @@ if (choice == "left" || choice == "l" || choice == "Left" || choice == "left." |
   	}//end fight
 
 
-}//left tunnel ends  
+	}//left tunnel ends  
 
-//right tunnel starts
-//Skeleton battle 
-else {  
-  while (h1 >= 1) {
+	//right tunnel starts
+	//Skeleton battle 
+	else {  
+ 	 while (h1 >= 1) {
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h3 << " health.\n" << endl;
   	
@@ -330,14 +337,154 @@ else {
   			cout << "You sapped 5 health!" << endl;
   			}
   			sleep(1);
-  		}//end special attack
+  			}//end special attack
   		
   		cout << "You take " << d3 << " damage!\n\n\n\n\n" << endl;//damage taken
   		health -= d3;
   		
-  	sleep(2);
-  	}//end fight
-}//ends right
+  		sleep(2);
+  		}//end fight
+	}//ends right
+//start second tunnel
+cout << "You go down the tunnel, it seems like the two paths converge into one anyways" << endl;
+sleep(1);
+cout << "Theres a map on the ground, pick it up? (y/n)" << endl;
+cin >> i2;
+	if (i2 == "y" || i2 == "yes" || i2 == "Yes" || i2 == "Y" ) {//Map
+		cout << "+------------+   +------------------------+" << endl;
+		cout << "|            |   |                        |" << endl;
+		cout << "|            |   |        +---------+     |" << endl;
+		cout << "|            |   |        |         |     |" << endl;
+		cout << "|       +----+   +-----   |         |     |" << endl;
+		cout << "|       |             |   |         |     |" << endl;
+		cout << "|       |   +-----+   |   +-+  +----+     |" << endl;
+		cout << "|       |   |     |   |     |  |          |" << endl;
+		cout << "|       |   +-----+   |     |  |          |" << endl;
+		cout << "|       |             |     |  |          |" << endl;
+		cout << "|       +----+   +----+     |  |          |" << endl;
+		cout << "+----+       |   |          |  |          |" << endl;
+		cout << "     |       | v |          |  |          |" << endl;
+		cout << "+-+  |       |   |          |  |          |" << endl;
+		cout << "| |  |       |   |          |  |          |" << endl;
+		cout << "| |  +-------+   +----------+  |          |" << endl;
+		cout << "| |                            |          |" << endl;
+		cout << "| +----------------------------+          |" << endl;
+		cout << "+-----------------------------------------+" << endl;
+		sleep(6);
+		cout << "\"It seems to be a map of the crypt..\"" << endl;
+		}
+	else {
+		cout << "You shuffle along the pathway" << endl;
+		}
+cout << "As you walk along, the tunnel splits into 2 paths" << endl;
+sleep(1);
+cout << "Which one will you take?(l/r)" << endl;
+cin >> choice;
+	if (choice == "left" || choice == "l" || choice == "Left" || choice == "left." || choice == "Left."){
+		cout << "You turn left and walk into the darkness." << endl;
+		sleep(2);
+		cout << "You walk into what appears to be a large room" << endl;
+		sleep(3);
+		cout << "\"There's something on the wall....\"" << endl;
+		sleep(2);
+		cout << "You realize too late, the walls are covered in slime!" << endl;
+		sleep(2);
+		cout << "You try and escape but the slime blocks the exit" << endl;
+		sleep(2);
+		cout << "You pull out your dagger...." << endl;
+		}
+			while (h4 >= 1) {//giant slime battle
+    			cout << "You have " << health << " health, and " << mana << " mana." << endl;
+  				cout << "It has " << h3 << " health.\n" << endl;
+  	
+  				cout << "What would you like to do?" << endl;
+  				cout << "1.Attack!\n2.Special attack(1 mana)!" << endl;
+
+  				cin >> choice;
+  				//character damage
+				srand(time(NULL));//so RNG does not repeat the same number 
+				int steeld = rand() %5 + 1;//first weapon
+				//enemy damage
+				srand(time(NULL));
+				int d4 = rand() %15 + 2;//giant slime
+				//RNG Special attack
+				srand(time(NULL));
+				int spec = rand() %4 + 1;
+  	
+  				//start attack
+  				if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
+  				sleep(1);
+  				cout << "You chose attack!" << endl;
+  				sleep(1);
+  				cout << "\nYou deal " << steeld << " damage!" << endl;//damage dealt statement
+  				h4 -= steeld;//subtract health from enemy
+  				sleep(1);
+  				}//end attack
+  	
+  				//start special attack
+  				else {
+  				sleep(1);
+  				cout << "You use a special attack." << endl;
+  				mana -= 1;
+  				sleep(1);
+  				//Hallowed blaze + 10 base damage
+  				if (spec == 1) {
+  				cout << "You used Hallowed Blaze!" << endl;
+  				h4 -= 15;
+  				sleep(1);
+  				cout << "You dealt 15 damage!" << endl;
+  				}
+  			
+  				//Critical slash x2
+  				if (spec == 2) {
+  				cout << "You used Critical Smite!" << endl;
+  				h4 -= (steeld * 2);
+  				sleep(1);
+  				cout << "You dealt " << steeld * 2 << " damage!" << endl;
+  				}
+  			
+  				//Divine infusion 4 + normal attack
+  				if (spec == 3) {
+  				cout << "You used Divine Infusion!" << endl;
+  				h4 -= 7;
+  				h4 -= steeld;
+  				sleep(1);
+  				cout << "You dealt " << steeld + 7 << " damage!" << endl;
+  				}
+  				
+  				//Vitalic Drain saps 5 hp
+  				if (spec == 4) {
+  				cout << "You used Vitalic Drain!" << endl;
+  				h4 -= 5;
+  				health += 5;
+  				sleep(1);
+  				cout << "You sapped 5 health!" << endl;
+  				}
+  				sleep(1);
+  				}//end special attack
+  		
+  				cout << "You take " << d4 << " damage!\n\n\n\n\n" << endl;//damage taken
+  				health -= d4;
+  		
+  				sleep(2);
+  			}
+		cout << "The giant slime disintegrates, leaving behind a sword, probably from \none of it's past victims" << endl;
+		sleep(2);
+		cout << "Pick it up?(y/n)" << endl; 
+		cin >> i3;
+			if (i3 == "y" || i3 == "yes" || i3 == "Yes" || i3 == "Y" ) {	
+				int sword = 1;
+				cout << "You pick it up." << endl;
+				sleep(2);
+				cout << "The blade makes you feel more powerful" << endl;
+				sleep(1);
+				cout << "*damage has been increased!*" << endl;
+			}
+			else {
+				cout << "\"I think i'll stick with my trusty steel dagger for now.\"" << endl;
+			}
+		
+		
 
 
 }//ends life statement
