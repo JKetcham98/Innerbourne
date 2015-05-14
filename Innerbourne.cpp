@@ -16,7 +16,7 @@ using namespace std;
 int main() 
 { 	//player stats
 	int health = 100;//player health
-	
+	int mana = 5;//player mana
 	
 	
 	
@@ -62,16 +62,17 @@ cin >> i1;
 
 cout << "You get up and look around to find a path illuminated by torches." << endl;
 sleep(2);
-cout << "\"Hopefully this will lead me out.\"" << endl;
+cout << "\"Hopefully this will lead me out.\"\n\n" << endl;
 sleep(2);
 cout << "As you head down the path you come across a slimy beast!" << endl;
 sleep(2);
 
 //Slime battle   
   while (h1 >= 1) {
+    cout << "You have " << health << " health, and " << mana << " mana." << endl;
+  	cout << "It has " << h1 << " health.\n" << endl;
+  	
   	cout << "What would you like to do?" << endl;
-  	cout << "You have " << health << " health, and " << mana << " mana." << endl;
-  	cout << "It has " << h1 << " health." << endl;
   	cout << "1.Attack!\n2.Special attack(1 mana)!" << endl;
 
   	cin >> choice;
@@ -83,7 +84,7 @@ sleep(2);
 	int d1 = rand() %5 + 3;//Slime(1)
 	//RNG Special attack
 	srand(time(NULL));
-	int spec = rand() %5 + 1;
+	int spec = rand() %4 + 1;
   	
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -136,7 +137,7 @@ sleep(2);
   			sleep(1);
   		}//end special attack
   		
-  		cout << "You take " << d1 << " damage!\n\n\n" << endl;//damage taken
+  		cout << "You take " << d1 << " damage!\n\n\n\n\n" << endl;//damage taken
   		health -= d1;
   		
   	sleep(2);
