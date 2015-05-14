@@ -100,6 +100,7 @@ sleep(2);
   		else {
   		sleep(1);
   		cout << "You use a special attack." << endl;
+  		mana -= 1;
   		sleep(1);
   			//Hallowed blaze + 10 base damage
   			if (spec == 1) {
