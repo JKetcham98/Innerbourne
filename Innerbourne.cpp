@@ -10,6 +10,7 @@
 #include <unistd.h> //for sleep on mac
 #include <time.h>  // for null
 #include <stdio.h> //for time
+#include <fstream>
 using namespace std;
 
 
@@ -35,7 +36,10 @@ int main()
 
 cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa.(turn on your sound)\n" << endl;
 sleep(3);
-cout << "Innerbourne" << endl;
+cout << " ___,,  ,,  ,  _,,_    __   _, ,  , ,_  ,  ,  _," << endl;
+cout << "' |  |\\ ||\\ | /_,|_)  '|_) / \\,|  | |_) |\\ | /_," << endl;
+cout << " _|_,|'\\||'\\|'\\_'| \\  _|_)'\\_/'\\__|'| \\ |'\\|'\\_ " << endl;
+cout << "'    '  `'  `   `'  `'     '      ` '  `'  `   `" << endl;
 sleep(3);
 cout << "\nYou enter a cold, damp crypt." << endl;
 sleep(2);
@@ -58,20 +62,22 @@ cin >> i1;
 	cout << "It's a story, a few parts are missing" << endl;
 	sleep(2);
 	cout << "\"Long ago, there was a place called Ro’calin, the biggest of the three great kingdoms.\"" << endl;
-	sleep(1);
+	sleep(2);
 	cout << "\".... These once vast and majestic empires were locked in an eternal war with demon queen Liana\"" << endl;
-	sleep(1);
+	sleep(2);
 	cout << "\" For years the battle raged on, neither side could overtake the other.\"" << endl;
-	sleep(1);
+	sleep(2);
 	cout << "\"Tired of this, Liana summoned the three heirs to the realm of the dead;\"" << endl;
-	sleep(1);
+	sleep(2);
 	cout << "\"Azazel, Abaddon, and Astaroth:\"" << endl;
 	sleep(2);
 	cout << "\"The Demonic Trinity.\"" << endl;
 	cout << "\"Seeing this, the celestial trine; the defenders of the heavens; \nsent their newborn down from the clouds to slay the demonic trinity.\"" << endl;
-	sleep(1);
+	sleep(2);
 	cout << "\" They were known as\"" << sleep(1) << "." << sleep(1) << "." << sleep (1) << "." << endl;
-	cout << "\"Innerbourne.\"" << endl;
+	sleep(1);
+	cout << "\"Innerbourne\"" << endl;
+	sleep(2);
 	cout << "The rest is illegible." << endl; 
     	}
 	else {
