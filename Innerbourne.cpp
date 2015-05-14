@@ -68,11 +68,11 @@ cin >> i1;
 	cout << "\"Azazel, Abaddon, and Astaroth:\"" << endl;
 	sleep(2);
 	cout << "\"The Demonic Trinity.\"" << endl;
-	cout << "\"Seeing this, the celestial trine; the defenders of the heavens; \nsent their newborn down from the clouds to slay the demonic trinity.\"" endl;
+	cout << "\"Seeing this, the celestial trine; the defenders of the heavens; \nsent their newborn down from the clouds to slay the demonic trinity.\"" << endl;
 	sleep(1);
 	cout << "\" They were known as\"" << sleep(1) << "." << sleep(1) << "." << sleep (1) << "." << endl;
-	cout << "\"Innerbourne.\"" endl;
-	cout << "The rest is illegible." endl; 
+	cout << "\"Innerbourne.\"" << endl;
+	cout << "The rest is illegible." << endl; 
     	}
 	else {
 	cout << "\"Must be nothing.\"" << endl;    
@@ -164,9 +164,11 @@ sleep(2);
   	}//end fight
   
 cout << "You managed to slay the slime!\n" << endl;
+cout << "You rest for a moment and gain 1 mana back" <<endl;
+mana += 1;
 cout << "As you travel down the tunnel the path splits." << endl;
-cout << "Would you like to go left or right(l/r)? << 
-cin << choice;
+cout << "Would you like to go left or right(l/r)?" << endl;
+cin >> choice;
 
 //start tunnel split
 //left
@@ -252,7 +254,8 @@ if (choice == "left" || choice == "l" || choice == "Left" || choice == "left." |
 }//left tunnel ends  
 
 //right tunnel starts
-//Skeleton battle   
+//Skeleton battle 
+else {  
   while (h1 >= 1) {
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h3 << " health.\n" << endl;
@@ -328,6 +331,8 @@ if (choice == "left" || choice == "l" || choice == "Left" || choice == "left." |
   		
   	sleep(2);
   	}//end fight
+}//ends right
+
 
 }//ends life statement
 else {//starts death statement
