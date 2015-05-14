@@ -70,9 +70,10 @@ sleep(2);
 //Slime battle   
   while (h1 >= 1) {
   	cout << "What would you like to do?" << endl;
-  	cout << "1.Attack!\n2.Defend!" << endl;
   	cout << "You have " << health << " health." << endl;
   	cout << "It has " << h1 << " health." << endl;
+  	cout << "1.Attack!\n2.Defend!" << endl;
+
   	cin >> choice;
   	//character stats
   	srand(time(NULL));
@@ -85,17 +86,26 @@ sleep(2);
   	
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
+  		sleep(1);
+  		cout << "You chose attack!" << endl;
+  		sleep(1);
   		cout << "\nYou deal " << steeld << " damage!" << endl;//damage dealt statement
   		h1 -= steeld;//subtract health from enemy
-  		cout << "You take " << d1 << " damage!" << endl;//damage taken
+  		sleep(1);
+  		cout << "You take " << d1 << " damage!\n\n\n" << endl;//damage taken
   		health -= d1;
   		}//end attack
   	
   		//start defend
   		else {
+  		sleep(1);
   		health -= (d1 - noshield); 
-  		cout << "You defend and take " << d1 - noshield<< " damage!" << endl;
+  		sleep(1);
+  		cout << "You defend." << endl;
+  		sleep(1);
+  		cout << "You take " << d1 - noshield<< " damage!\n\n\n" << endl;
   		}//end defend
+  		
   	sleep(2);
   	}//end fight
   
