@@ -37,11 +37,13 @@ cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa.(turn on 
 sleep(3);
 cout << "Innerbourne" << endl;
 sleep(3);
-cout << "\nYou wake up in a cold, damp crypt." << endl;
+cout << "\nYou enter a cold, damp crypt." << endl;
 sleep(2);
-cout << "You find a steel dagger on the ground along with a tattered scrap of paper..." << endl;
+cout << "You take out your steel dagger from its scabbard." << endl;
+sleep(1);
+cout << "You scan the dimly lit ground, there seems to be a piece of paper lying there." << endl;
 sleep(2);
-cout << "You pick up the dagger and look over at the paper" << endl;
+cout << "You look over at the paper" << endl;
 sleep(2);
 cout << "It seems to be a note." << endl;
 sleep(2);
@@ -53,9 +55,24 @@ cin >> i1;
 	if (i1 == "y" || i1 == "yes" || i1 == "Yes" || i1 == "Y" ) {
 	cout << "You read the note." << endl;
 	sleep(2);
-	cout << "It says one thing..." << endl;
+	cout << "It's a story, a few parts are missing" << endl;
 	sleep(2);
-	cout << "\nSurvive." << endl;
+	cout << "\"Long ago, there was a place called Ro’calin, the biggest of the three great kingdoms.\"" << endl;
+	sleep(1);
+	cout << "\".... These once vast and majestic empires were locked in an eternal war with demon queen Liana\"" << endl;
+	sleep(1);
+	cout << "\" For years the battle raged on, neither side could overtake the other.\"" << endl;
+	sleep(1);
+	cout << "\"Tired of this, Liana summoned the three heirs to the realm of the dead;\"" << endl;
+	sleep(1);
+	cout << "\"Azazel, Abaddon, and Astaroth:\"" << endl;
+	sleep(2);
+	cout << "\"The Demonic Trinity.\"" << endl;
+	cout << "\"Seeing this, the celestial trine; the defenders of the heavens; \nsent their newborn down from the clouds to slay the demonic trinity.\"" endl;
+	sleep(1);
+	cout << "\" They were known as\"" << sleep(1) << "." << sleep(1) << "." << sleep (1) << "." << endl;
+	cout << "\"Innerbourne.\"" endl;
+	cout << "The rest is illegible." endl; 
     	}
 	else {
 	cout << "\"Must be nothing.\"" << endl;    
