@@ -83,7 +83,7 @@ sleep(2);
 	int d1 = rand() %5 + 3;//Slime(1)
 	//RNG Special attack
 	srand(time(NULL));
-	int spec = rand() %6 + 1;
+	int spec = rand() %5 + 1;
   	
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -93,8 +93,6 @@ sleep(2);
   		cout << "\nYou deal " << steeld << " damage!" << endl;//damage dealt statement
   		h1 -= steeld;//subtract health from enemy
   		sleep(1);
-  		cout << "You take " << d1 << " damage!\n\n\n" << endl;//damage taken
-  		health -= d1;
   		}//end attack
   	
   		//start special attack
@@ -102,28 +100,44 @@ sleep(2);
   		sleep(1);
   		cout << "You use a special attack." << endl;
   		sleep(1);
-  			//Hallowed blaze + 15 base damage
+  			//Hallowed blaze + 10 base damage
   			if (spec == 1) {
-  			
+  			cout << "You used Hallowed Blaze!" << endl;
+  			h1 -= 15;
+  			sleep(1);
+  			cout << "You dealt 15 damage!" << endl;
   			}
   			
   			//Critical slash x2
   			if (spec == 2) {
-  			
+  			cout << "You used Critical Smite!" << endl;
+  			h1 -= (steeld * 2);
+  			sleep(1);
+  			cout << "You dealt " << steeld * 2 << " damage!" << endl;
   			}
   			
-  			//Divine infusion 7+ normal attack
+  			//Divine infusion 4 + normal attack
   			if (spec == 3) {
-  			
+  			cout << "You used Divine Infusion!" << endl;
+  			h1 -= 7;
+  			h1 -= steeld;
+  			sleep(1);
+  			cout << "You dealt " << steeld + 7 << " damage!" << endl;
   			}
   			
-  			//Vitalic Drain saps their health equal to your damage
+  			//Vitalic Drain saps 5 hp
   			if (spec == 4) {
-  			
+  			cout << "You used Vitalic Drain!" << endl;
+  			h1 -= 5;
+  			health += 5;
+  			sleep(1);
+  			cout << "You sapped 5 health!" << endl;
   			}
-  			
-  			
+  			sleep(1);
   		}//end special attack
+  		
+  		cout << "You take " << d1 << " damage!\n\n\n" << endl;//damage taken
+  		health -= d1;
   		
   	sleep(2);
   	}//end fight
