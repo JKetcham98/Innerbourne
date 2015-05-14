@@ -70,19 +70,20 @@ sleep(2);
 //Slime battle   
   while (h1 >= 1) {
   	cout << "What would you like to do?" << endl;
-  	cout << "You have " << health << " health." << endl;
+  	cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h1 << " health." << endl;
-  	cout << "1.Attack!\n2.Defend!" << endl;
+  	cout << "1.Attack!\n2.Special attack(1 mana)!" << endl;
 
   	cin >> choice;
-  	//character stats
-  	srand(time(NULL));
-	int noshield = rand() %3 + 1; //the starting no shield
+  	//character damage
 	srand(time(NULL));//so RNG does not repeat the same number 
 	int steeld = rand() %5 + 1;//first weapon
 	//enemy damage
 	srand(time(NULL));
 	int d1 = rand() %5 + 3;//Slime(1)
+	//RNG Special attack
+	srand(time(NULL));
+	int spec = rand() %6 + 1;
   	
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -96,15 +97,33 @@ sleep(2);
   		health -= d1;
   		}//end attack
   	
-  		//start defend
+  		//start special attack
   		else {
   		sleep(1);
-  		health -= (d1 - noshield); 
+  		cout << "You use a special attack." << endl;
   		sleep(1);
-  		cout << "You defend." << endl;
-  		sleep(1);
-  		cout << "You take " << d1 - noshield<< " damage!\n\n\n" << endl;
-  		}//end defend
+  			//Hallowed blaze + 15 base damage
+  			if (spec == 1) {
+  			
+  			}
+  			
+  			//Critical slash x2
+  			if (spec == 2) {
+  			
+  			}
+  			
+  			//Divine infusion 7+ normal attack
+  			if (spec == 3) {
+  			
+  			}
+  			
+  			//Vitalic Drain saps their health equal to your damage
+  			if (spec == 4) {
+  			
+  			}
+  			
+  			
+  		}//end special attack
   		
   	sleep(2);
   	}//end fight
