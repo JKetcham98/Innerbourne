@@ -8,7 +8,7 @@
 #include <cstdlib> // for RNG
 #include <string> // for string
 #include <unistd.h> //for sleep on mac
-#include <time.h>  // for null
+#include <time.h> // for null
 #include <stdio.h> //for time
 #include <fstream>
 using namespace std;
@@ -72,7 +72,7 @@ cin >> i1;
 	sleep(2);
 	cout << "\"These once vast and majestic empires were locked in an eternal war with \ndemon queen Liana\"" << endl;
 	sleep(2);
-	cout << "\" For years the battle raged on, neither side could overtake the other.\"" << endl;
+	cout << "\"For years the battle raged on, neither side could overtake the other.\"" << endl;
 	sleep(2);
 	cout << "\"Tired of this, Liana summoned the three heirs to the realm of the dead;\"" << endl;
 	sleep(2);
@@ -345,6 +345,11 @@ cin >> choice;
   		sleep(2);
   		}//end fight
 	}//ends right
+	
+	
+	
+	
+	
 //start second tunnel
 cout << "You go down the tunnel, it seems like the two paths converge into one anyways" << endl;
 sleep(1);
@@ -355,7 +360,7 @@ cin >> i2;
 		cout << "|            |   |                        |" << endl;
 		cout << "|            |   |        +---------+     |" << endl;
 		cout << "|            |   |        |         |     |" << endl;
-		cout << "|       +----+   +-----   |         |     |" << endl;
+		cout << "|       +----+   +-----   |    X    |     |" << endl;
 		cout << "|       |             |   |         |     |" << endl;
 		cout << "|       |   +-----+   |   +-+  +----+     |" << endl;
 		cout << "|       |   |     |   |     |  |          |" << endl;
