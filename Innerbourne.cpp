@@ -143,7 +143,7 @@ sleep(2);
   	sleep(2);
   	}//end fight
   
-cout << "You managed to slay the beast!" << endl;
+cout << "You managed to slay the slime!" << endl;
   
 
 }//ends life statement
