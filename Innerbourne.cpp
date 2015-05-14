@@ -29,9 +29,11 @@ int main()
 	string i3 = "0";//third
 
 	//swords
-	int sword = 0;//steel sword
-	
-
+	int sword = 5;//shortsword
+	int lsword = 10; //longsword
+	int muramasa = 20;
+	int claymore = 30;
+	int excalibur = 50;
 	
 	
 	
@@ -61,7 +63,7 @@ sleep(2);
 
 if (health >=1){//makes sure it ends when you die
 
-cout << "Read it up(y/n)?" << endl;//note interaction
+cout << "Read it up(y/n)?" << endl;
 cin >> i1;
 	if (i1 == "y" || i1 == "yes" || i1 == "Yes" || i1 == "Y" ) {
 	cout << "You read the note." << endl;
@@ -86,7 +88,7 @@ cin >> i1;
 	cout << "\"Innerbourne\"" << endl;
 	sleep(2);
 	cout << "The rest is illegible." << endl; 
-    	}
+    	}//note interaction
 	else {
 	cout << "\"Must be nothing.\"" << endl;    
     	}
@@ -110,7 +112,7 @@ sleep(2);
   	cin >> choice;
   	//character damage
 	srand(time(NULL));//so RNG does not repeat the same number 
-	int steeld = rand() %5 + 1;//first weapon
+	int basedmg = rand() %5 + 1;//rng base thst gets added to weapon
 	//enemy damage
 	srand(time(NULL));
 	int d1 = rand() %2 + 1;//Slime(1)
@@ -123,8 +125,8 @@ sleep(2);
   		sleep(1);
   		cout << "You chose attack!" << endl;
   		sleep(1);
-  		cout << "\nYou deal " << steeld << " damage!" << endl;//damage dealt statement
-  		h1 -= steeld;//subtract health from enemy
+  		cout << "\nYou deal " << basedmg << " damage!" << endl;//damage dealt statement
+  		h1 -= basedmg;//subtract health from enemy
   		sleep(1);
   		}//end attack
   	
@@ -145,18 +147,18 @@ sleep(2);
   			//Critical slash x2
   			if (spec == 2) {
   			cout << "You used Critical Smite!" << endl;
-  			h1 -= (steeld * 2);
+  			h1 -= (basedmg * 2);
   			sleep(1);
-  			cout << "You dealt " << steeld * 2 << " damage!" << endl;
+  			cout << "You dealt " << basedmg * 2 << " damage!" << endl;
   			}
   			
   			//Divine infusion 4 + normal attack
   			if (spec == 3) {
   			cout << "You used Divine Infusion!" << endl;
   			h1 -= 7;
-  			h1 -= steeld;
+  			h1 -= basedmg;
   			sleep(1);
-  			cout << "You dealt " << steeld + 7 << " damage!" << endl;
+  			cout << "You dealt " << basedmg + 7 << " damage!" << endl;
   			}
   			
   			//Vitalic Drain saps 5 hp
@@ -197,7 +199,7 @@ cin >> choice;
   	cin >> choice;
   	//character damage
 	srand(time(NULL));//so RNG does not repeat the same number 
-	int steeld = rand() %5 + 1;//first weapon
+	int basedmg = rand() %5 + 1;//first weapon
 	//enemy damage
 	srand(time(NULL));
 	int d2 = rand() %3 + 1;//goblin
@@ -210,8 +212,8 @@ cin >> choice;
   		sleep(1);
   		cout << "You chose attack!" << endl;
   		sleep(1);
-  		cout << "\nYou deal " << steeld << " damage!" << endl;//damage dealt statement
-  		h2 -= steeld;//subtract health from enemy
+  		cout << "\nYou deal " << basedmg << " damage!" << endl;//damage dealt statement
+  		h2 -= basedmg;//subtract health from enemy
   		sleep(1);
   		}//end attack
   	
@@ -232,18 +234,18 @@ cin >> choice;
   			//Critical slash x2
   			if (spec == 2) {
   			cout << "You used Critical Smite!" << endl;
-  			h2 -= (steeld * 2);
+  			h2 -= (basedmg * 2);
   			sleep(1);
-  			cout << "You dealt " << steeld * 2 << " damage!" << endl;
+  			cout << "You dealt " << basedmg * 2 << " damage!" << endl;
   			}
   			
   			//Divine infusion 4 + normal attack
   			if (spec == 3) {
   			cout << "You used Divine Infusion!" << endl;
   			h2 -= 7;
-  			h2 -= steeld;
+  			h2 -= basedmg;
   			sleep(1);
-  			cout << "You dealt " << steeld + 7 << " damage!" << endl;
+  			cout << "You dealt " << basedmg + 7 << " damage!" << endl;
   			}
   			
   			//Vitalic Drain saps 5 hp
@@ -279,7 +281,7 @@ cin >> choice;
   	cin >> choice;
   	//character damage
 	srand(time(NULL));//so RNG does not repeat the same number 
-	int steeld = rand() %5 + 1;//first weapon
+	int basedmg = rand() %5 + 1;//first weapon
 	//enemy damage
 	srand(time(NULL));
 	int d3 = rand() %5 + 2;//goblin
@@ -292,8 +294,8 @@ cin >> choice;
   		sleep(1);
   		cout << "You chose attack!" << endl;
   		sleep(1);
-  		cout << "\nYou deal " << steeld << " damage!" << endl;//damage dealt statement
-  		h3 -= steeld;//subtract health from enemy
+  		cout << "\nYou deal " << basedmg << " damage!" << endl;//damage dealt statement
+  		h3 -= basedmg;//subtract health from enemy
   		sleep(1);
   		}//end attack
   	
@@ -314,18 +316,18 @@ cin >> choice;
   			//Critical slash x2
   			if (spec == 2) {
   			cout << "You used Critical Smite!" << endl;
-  			h3 -= (steeld * 2);
+  			h3 -= (basedmg * 2);
   			sleep(1);
-  			cout << "You dealt " << steeld * 2 << " damage!" << endl;
+  			cout << "You dealt " << basedmg * 2 << " damage!" << endl;
   			}
   			
   			//Divine infusion 4 + normal attack
   			if (spec == 3) {
   			cout << "You used Divine Infusion!" << endl;
   			h3 -= 7;
-  			h3 -= steeld;
+  			h3 -= basedmg;
   			sleep(1);
-  			cout << "You dealt " << steeld + 7 << " damage!" << endl;
+  			cout << "You dealt " << basedmg + 7 << " damage!" << endl;
   			}
   			
   			//Vitalic Drain saps 5 hp
@@ -377,7 +379,7 @@ cin >> i2;
 		cout << "+-----------------------------------------+" << endl;
 		sleep(6);
 		cout << "\"It seems to be a map of the crypt..\"" << endl;
-		}
+		}//map interaction
 	else {
 		cout << "You shuffle along the pathway" << endl;
 		}
@@ -408,7 +410,7 @@ cin >> choice;
   				cin >> choice;
   				//character damage
 				srand(time(NULL));//so RNG does not repeat the same number 
-				int steeld = rand() %5 + 1;//first weapon
+				int basedmg = rand() %5 + 1;//first weapon
 				//enemy damage
 				srand(time(NULL));
 				int d4 = rand() %15 + 2;//giant slime
@@ -421,8 +423,8 @@ cin >> choice;
   				sleep(1);
   				cout << "You chose attack!" << endl;
   				sleep(1);
-  				cout << "\nYou deal " << steeld << " damage!" << endl;//damage dealt statement
-  				h4 -= steeld;//subtract health from enemy
+  				cout << "\nYou deal " << basedmg << " damage!" << endl;//damage dealt statement
+  				h4 -= basedmg;//subtract health from enemy
   				sleep(1);
   				}//end attack
   	
@@ -443,18 +445,18 @@ cin >> choice;
   				//Critical slash x2
   				if (spec == 2) {
   				cout << "You used Critical Smite!" << endl;
-  				h4 -= (steeld * 2);
+  				h4 -= (basedmg * 2);
   				sleep(1);
-  				cout << "You dealt " << steeld * 2 << " damage!" << endl;
+  				cout << "You dealt " << basedmg * 2 << " damage!" << endl;
   				}
   			
   				//Divine infusion 4 + normal attack
   				if (spec == 3) {
   				cout << "You used Divine Infusion!" << endl;
   				h4 -= 7;
-  				h4 -= steeld;
+  				h4 -= basedmg;
   				sleep(1);
-  				cout << "You dealt " << steeld + 7 << " damage!" << endl;
+  				cout << "You dealt " << basedmg + 7 << " damage!" << endl;
   				}
   				
   				//Vitalic Drain saps 5 hp
@@ -478,7 +480,6 @@ cin >> choice;
 		cout << "Pick it up?(y/n)" << endl; 
 		cin >> i3;
 			if (i3 == "y" || i3 == "yes" || i3 == "Yes" || i3 == "Y" ) {	
-				int sword = 1;
 				cout << "You pick it up." << endl;
 				sleep(2);
 				cout << "The blade makes you feel more powerful" << endl;
