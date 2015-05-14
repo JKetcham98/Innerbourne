@@ -10,7 +10,7 @@
 #include <unistd.h> //for sleep on mac
 #include <time.h>  // for null
 #include <stdio.h> //for time
-#include <fstream>
+#include <fstream> //for art
 using namespace std;
 
 
@@ -25,7 +25,7 @@ int main()
 	//interaction
 	string i1 = "0";//first interaction
 	string choice = "0";//variable for choices
-
+	string choice2 = "0";//variable for choices
 
 	
 
@@ -174,13 +174,28 @@ cout << "You rest for a moment and gain 1 mana back" <<endl;
 mana += 1;
 cout << "As you travel down the tunnel the path splits." << endl;
 cout << "Would you like to go left or right(l/r)?" << endl;
-cin >> choice;
+cin >> choice2;
+sleep(2);
+
+
+
+
+
+
+
+
+
+
 
 //start tunnel split
+
+
 //left
-if (choice == "left" || choice == "l" || choice == "Left" || choice == "left." || choice == "Left."){
+if (choice2 == "left" || choice2 == "l" || choice2 == "Left" || choice2 == "left." || choice2 == "Left."){
 //Goblin battle   
-  while (h1 >= 1) {
+  while (h2 >= 1) {
+cout << "You travel down the right path to find a Goblin!\n\n" << endl;
+sleep(2);
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h2 << " health.\n" << endl;
   	
@@ -206,7 +221,7 @@ if (choice == "left" || choice == "l" || choice == "Left" || choice == "left." |
   		cout << "\nYou deal " << steeld << " damage!" << endl;//damage dealt statement
   		h2 -= steeld;//subtract health from enemy
   		sleep(1);
-  		}//end attack
+  			}//end attack
   	
   		//start special attack
   		else {
@@ -220,7 +235,7 @@ if (choice == "left" || choice == "l" || choice == "Left" || choice == "left." |
   			h2 -= 15;
   			sleep(1);
   			cout << "You dealt 15 damage!" << endl;
-  			}
+  				}
   			
   			//Critical slash x2
   			if (spec == 2) {
@@ -228,7 +243,7 @@ if (choice == "left" || choice == "l" || choice == "Left" || choice == "left." |
   			h2 -= (steeld * 2);
   			sleep(1);
   			cout << "You dealt " << steeld * 2 << " damage!" << endl;
-  			}
+  				}
   			
   			//Divine infusion 4 + normal attack
   			if (spec == 3) {
@@ -237,7 +252,7 @@ if (choice == "left" || choice == "l" || choice == "Left" || choice == "left." |
   			h2 -= steeld;
   			sleep(1);
   			cout << "You dealt " << steeld + 7 << " damage!" << endl;
-  			}
+  				}
   			
   			//Vitalic Drain saps 5 hp
   			if (spec == 4) {
@@ -246,23 +261,27 @@ if (choice == "left" || choice == "l" || choice == "Left" || choice == "left." |
   			health += 5;
   			sleep(1);
   			cout << "You sapped 5 health!" << endl;
-  			}
+  				}
   			sleep(1);
-  		}//end special attack
+  			}//end special attack
   		
   		cout << "You take " << d2 << " damage!\n\n\n\n\n" << endl;//damage taken
   		health -= d2;
   		
   	sleep(2);
-  	}//end fight
+  		}//end fight
 
 
-}//left tunnel ends  
+	}//left tunnel ends  
+
+
 
 //right tunnel starts
 //Skeleton battle 
 else {  
-  while (h1 >= 1) {
+cout << "You travel down the right path to find a skeleton!\n\n" << endl;
+sleep(2);
+  while (h3 >= 1) {
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h3 << " health.\n" << endl;
   	
@@ -302,7 +321,7 @@ else {
   			h3 -= 15;
   			sleep(1);
   			cout << "You dealt 15 damage!" << endl;
-  			}
+  				}
   			
   			//Critical slash x2
   			if (spec == 2) {
@@ -310,7 +329,7 @@ else {
   			h3 -= (steeld * 2);
   			sleep(1);
   			cout << "You dealt " << steeld * 2 << " damage!" << endl;
-  			}
+  				}
   			
   			//Divine infusion 4 + normal attack
   			if (spec == 3) {
@@ -319,7 +338,7 @@ else {
   			h3 -= steeld;
   			sleep(1);
   			cout << "You dealt " << steeld + 7 << " damage!" << endl;
-  			}
+  				}
   			
   			//Vitalic Drain saps 5 hp
   			if (spec == 4) {
@@ -328,16 +347,16 @@ else {
   			health += 5;
   			sleep(1);
   			cout << "You sapped 5 health!" << endl;
-  			}
+  				}
   			sleep(1);
-  		}//end special attack
+  			}//end special attack
   		
   		cout << "You take " << d3 << " damage!\n\n\n\n\n" << endl;//damage taken
   		health -= d3;
   		
   	sleep(2);
-  	}//end fight
-}//ends right
+  		}//end fight
+	}//ends right
 
 
 }//ends life statement
