@@ -307,7 +307,7 @@ cin >> choice;
 	else {  
  	cout << "A skeleton charges at you!" << endl;
  	sleep(2);
- 	 while (h3 >= 1) {
+ 	 while (h1 >= 1) {
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h3 << " health.\n" << endl;
   	
