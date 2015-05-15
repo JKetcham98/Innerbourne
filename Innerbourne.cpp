@@ -28,12 +28,21 @@ int main()
 	string i2 = "0";//second interaction
 	string i3 = "0";//third
 
+
+	//sword identifiers
+	int s1 = 1;
+	int s2 = 0;
+	int s3 = 0;
+	int s4 = 0;
+	
+	
+
 	//swords
-	int sword = 5;//shortsword
-	int lsword = 10; //longsword
-	int muramasa = 20;
-	int claymore = 30;
-	int excalibur = 50;
+	int sword = 0;//shortsword
+	int lsword = 0; //longsword
+	int muramasa = 0;
+	int claymore = 0;
+	int excalibur = 0;
 	
 	
 	
@@ -42,6 +51,7 @@ int main()
 	int h2 = 25;//goblin
 	int h3 = 10;//skeleton
 	int h4 = 30;//giant slime
+	int h5 = 25;//goblin2
 
 cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa.(turn on your sound)\n" << endl;
 sleep(3);
@@ -189,6 +199,8 @@ cin >> choice;
 	//left
 	if (choice == "left" || choice == "l" || choice == "Left" || choice == "left." || choice == "Left."){
 	//Goblin battle   
+	cout << "A goblin pounces out at you!" << endl;
+	sleep(2);
   	while (h2 >= 1) {
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h2 << " health.\n" << endl;
@@ -271,6 +283,8 @@ cin >> choice;
 	//right tunnel starts
 	//Skeleton battle 
 	else {  
+ 	cout << "A skeleton charges at you!" << endl;
+ 	sleep(2);
  	 while (h1 >= 1) {
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h3 << " health.\n" << endl;
@@ -402,7 +416,7 @@ cin >> choice;
 		}
 			while (h4 >= 1) {//giant slime battle
     			cout << "You have " << health << " health, and " << mana << " mana." << endl;
-  				cout << "It has " << h3 << " health.\n" << endl;
+  				cout << "It has " << h4 << " health.\n" << endl;
   	
   				cout << "What would you like to do?" << endl;
   				cout << "1.Attack!\n2.Special attack(1 mana)!" << endl;
@@ -480,7 +494,8 @@ cin >> choice;
 		cout << "Pick it up?(y/n)" << endl; 
 		cin >> i3;
 			if (i3 == "y" || i3 == "yes" || i3 == "Yes" || i3 == "Y" ) {	
-				basedmg += lsword;
+				s2++ ;
+				s1-- ;
 				cout << "You pick it up." << endl;
 				sleep(2);
 				cout << "The blade makes you feel more powerful" << endl;
@@ -490,6 +505,131 @@ cin >> choice;
 			else {
 				cout << "\"I think i'll stick with my trusty steel dagger for now.\"" << endl;
 			}
+		cout << "You walk back to the place where the tunnel splits" << endl;
+		sleep(2);
+	if (choice == "right" || choice == "Right" || choice == "r" || choice == "Right." || choice == "right.") {
+		cout << "You take a right" << endl;
+		}
+	cout << "A rush of fresh air hits you" << endl;
+	sleep(2);
+	cout << "You're almost out.." << endl;
+	sleep(2);
+	cout << "You see a figure out of the corner of your eye" << endl;
+	sleep(1);
+	cout << "It's a goblin!" << endl;
+		if (s2 == 1) {
+			cout << "You take out your newfound sword, its time to fight!" << endl;
+			}
+		else {
+			cout << "You take out your dagger, ready for an attack." << endl;
+			}
+	while (h5 >= 1) {//goblin attack
+    			cout << "You have " << health << " health, and " << mana << " mana." << endl;
+  				cout << "It has " << h5 << " health.\n" << endl;
+  	
+  				cout << "What would you like to do?" << endl;
+  				cout << "1.Attack!\n2.Special attack(1 mana)!" << endl;
+
+  				cin >> choice;
+  				//character damage
+				
+				srand(time(NULL));//so RNG does not repeat the same number 
+				int basedmg = rand() %5 + 1;//first weapon
+				srand(time(NULL));
+				int lsword = rand() %20 + 5;//second weapon
+				//enemy damage
+				srand(time(NULL));
+				int d5 = rand() %10 + 2;//goblin
+				//RNG Special attack
+				srand(time(NULL));
+				int spec = rand() %4 + 1;
+  	
+  				//start attack
+  				if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
+  					if (s2 == 1) {
+  						sleep(1);
+  						cout << "You chose attack!" << endl;
+  						sleep(1);
+  						cout << "\nYou deal " << lsword << " damage!" << endl;//damage dealt statement
+  						h5 -= lsword;//subtract health from enemy
+  						sleep(1);
+  					}
+  					if (s1 == 1) {
+  						sleep(1);
+  						cout << "You chose attack!" << endl;
+  						sleep(1);
+  						cout << "\nYou deal " << basedmg << " damage!" << endl;//damage dealt statement
+  						h5 -= basedmg;//subtract health from enemy
+  						sleep(1);
+  					}
+  				}//end attack
+  	
+  				//start special attack
+  				else {
+  				sleep(1);
+  				cout << "You use a special attack." << endl;
+  				mana -= 1;
+  				sleep(1);
+  				//Hallowed blaze + 10 base damage
+  				if (spec == 1) {
+  				cout << "You used Hallowed Blaze!" << endl;
+  				h5 -= 15;
+  				sleep(1);
+  				cout << "You dealt 15 damage!" << endl;
+  				}
+  			
+  				//Critical slash x2
+  				if (spec == 2) {
+  					if (s1 == 1) {
+  						cout << "You used Critical Smite!" << endl;
+  						h5 -= (basedmg * 2);
+  						sleep(1);
+  						cout << "You dealt " << basedmg * 2 << " damage!" << endl;
+  					}
+  					if (s2 == 1) {
+  						cout << "You used Critical Smite!" << endl;
+  						h5 -= (lsword * 2);
+  						sleep(1);
+  						cout << "You dealt " << basedmg * 2 << " damage!" << endl;
+  					}
+  				}
+  			
+  				//Divine infusion 4 + normal attack
+  				if (spec == 3) {
+  					if (s1 == 1) {
+  						cout << "You used Divine Infusion!" << endl;
+  						h5 -= 7;
+  						h5 -= basedmg;
+  						sleep(1);
+  						cout << "You dealt " << basedmg + 7 << " damage!" << endl;
+					} 
+					if (s1 == 2) {
+  						cout << "You used Divine Infusion!" << endl;
+  						h5 -= 7;
+  						h5 -= lsword;
+  						sleep(1);
+  						cout << "You dealt " << lsword + 7 << " damage!" << endl;
+					} 				
+  				}
+  				
+  				//Vitalic Drain saps 5 hp
+  				if (spec == 4) {
+  				cout << "You used Vitalic Drain!" << endl;
+  				h5 -= 5;
+  				health += 5;
+  				sleep(1);
+  				cout << "You sapped 5 health!" << endl;
+  				}
+  				sleep(1);
+  				}//end special attack
+  		
+  				cout << "You take " << d5 << " damage!\n\n\n\n\n" << endl;//damage taken
+  				health -= d5;
+  		
+  				sleep(2);
+  			}//end goblin attack
+			
+		
 		
 		
 
