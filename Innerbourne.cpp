@@ -518,10 +518,10 @@ cin >> choice;
 	sleep(1);
 	cout << "It's a goblin!" << endl;
 		if (s2 == 1) {
-			cout << "You take out your newfound sword, its time to fight!" << endl;
+			cout << "You take out your newfound sword, its time to fight!\n" << endl;
 			}
 		else {
-			cout << "You take out your dagger, ready for an attack." << endl;
+			cout << "You take out your dagger, ready for an attack.\n" << endl;
 			}
 	while (h5 >= 1) {//goblin attack
     			cout << "You have " << health << " health, and " << mana << " mana." << endl;
