@@ -518,7 +518,7 @@ cin >> choice;
   			else { //out of mana
   			cout << "\nOut of mana. You hit the enemy with a normal attack for" << basedmg << endl;
   			h4 -= basedmg;
-  					}//ends out out of mana
+  					}//ends if out of mana
   				}//end special attack
   		
   				cout << "You take " << d4 << " damage!\n\n\n\n\n" << endl;//damage taken
