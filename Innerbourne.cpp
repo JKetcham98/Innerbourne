@@ -522,14 +522,14 @@ cin >> choice;
 	sleep(2);
 	cout << "You see a figure out of the corner of your eye" << endl;
 	sleep(1);
-	cout << "It's a goblin!" << endl;
+	cout << "It's a goblin chief!" << endl;
 		if (s2 == 1) {
 			cout << "You take out your newfound sword, its time to fight!\n" << endl;
 			}
 		else {
 			cout << "You take out your dagger, ready for an attack.\n" << endl;
 			}
-	while (h5 >= 1) {//goblin attack
+	while (h5 >= 1) {//goblin chief attack
     			cout << "You have " << health << " health, and " << mana << " mana." << endl;
   				cout << "It has " << h5 << " health.\n" << endl;
   	
@@ -545,7 +545,7 @@ cin >> choice;
 				int lsword = rand() %20 + 5;//second weapon
 				//enemy damage
 				srand(time(NULL));
-				int d5 = rand() %10 + 2;//goblin
+				int d5 = rand() %10 + 2;//goblin chief
 				//RNG Special attack
 				srand(time(NULL));
 				int spec = rand() %4 + 1;
@@ -596,7 +596,7 @@ cin >> choice;
   						cout << "You used Critical Smite!" << endl;
   						h5 -= (lsword * 2);
   						sleep(1);
-  						cout << "You dealt " << basedmg * 2 << " damage!" << endl;
+  						cout << "You dealt " << lsword * 2 << " damage!" << endl;
   					}
   				}
   			
@@ -633,7 +633,7 @@ cin >> choice;
   				health -= d5;
   		
   				sleep(2);
-  			}//end goblin attack
+  			}//end goblin chief attack
 			
 		
 		
