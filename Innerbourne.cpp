@@ -609,7 +609,7 @@ cin >> choice;
   						sleep(1);
   						cout << "You dealt " << basedmg + 7 << " damage!" << endl;
 					} 
-					if (s1 == 2) {
+					if (s2 == 1) {
   						cout << "You used Divine Infusion!" << endl;
   						h5 -= 7;
   						h5 -= lsword;
