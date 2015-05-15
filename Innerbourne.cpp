@@ -642,7 +642,13 @@ cin >> choice;
 
 }//ends life statement
 else {//starts death statement
-cout << "Game over, you suffered a horrific bloody end." << endl;
+cout << " ▄▀▀▀▀▄    ▄▀▀█▄   ▄▀▀▄ ▄▀▄  ▄▀▀█▄▄▄▄      ▄▀▀▀▀▄   ▄▀▀▄ ▄▀▀▄  ▄▀▀█▄▄▄▄  ▄▀▀▄▀▀▀▄ " << endl;
+cout << "█         ▐ ▄▀ ▀▄ █  █ ▀  █ ▐  ▄▀   ▐     █      █ █   █    █ ▐  ▄▀   ▐ █   █   █ " << endl;
+cout << "█    ▀▄▄    █▄▄▄█ ▐  █    █   █▄▄▄▄▄      █      █ ▐  █    █    █▄▄▄▄▄  ▐  █▀▀█▀ " << endl;
+cout << "█     █ █  ▄▀   █   █    █    █    ▌      ▀▄    ▄▀    █   ▄▀    █    ▌   ▄▀    █ " << endl;
+cout << "▐▀▄▄▄▄▀ ▐ █   ▄▀  ▄▀   ▄▀    ▄▀▄▄▄▄         ▀▀▀▀       ▀▄▀     ▄▀▄▄▄▄   █     █  " << endl;
+cout << "▐         ▐   ▐   █    █     █    ▐                            █    ▐   ▐     ▐  " << endl;
+cout << "                  ▐    ▐     ▐                                 ▐                 " << endl;
 }//ends death statement
 return 0;            
 }
