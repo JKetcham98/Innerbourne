@@ -148,7 +148,6 @@ sleep(2);
   	
   		//start special attack
   		else {
-  		if (mana > 0) {
   		sleep(1);
   		cout << "You use a special attack." << endl;
   		mana -= 1;
@@ -187,13 +186,6 @@ sleep(2);
   			cout << "You sapped 5 health!" << endl;
   			}
   			sleep(1);
-  			}//end spec if mana applies
-  			
-  			else { //out of mana
-  			cout << "\nOut of mana. You hit the enemy with a normal attack for" << basedmg << endl;
-  			h1 -= basedmg;
-  					}//ends out out of mana
-  			
   		}//end special attack
   		
   		cout << "You take " << d1 << " damage!\n\n\n\n\n" << endl;//damage taken
@@ -245,7 +237,6 @@ cin >> choice;
   	
   		//start special attack
   		else {
-  		if (mana > 0) {
   		sleep(1);
   		cout << "You use a special attack." << endl;
   		mana -= 1;
@@ -284,13 +275,6 @@ cin >> choice;
   			cout << "You sapped 5 health!" << endl;
   			}
   			sleep(1);
-  				}//end spec if mana applies
-  			
-  			else { //out of mana
-  			cout << "\nOut of mana. You hit the enemy with a normal attack for" << basedmg << endl;
-  			h2 -= basedmg;
-  					}//ends out out of mana
-  			
   		}//end special attack
   		
   		cout << "You take " << d2 << " damage!\n\n\n\n\n" << endl;//damage taken
@@ -337,7 +321,6 @@ cin >> choice;
   	
   		//start special attack
   		else {
-  		if (mana > 0) {
   		sleep(1);
   		cout << "You use a special attack." << endl;
   		mana -= 1;
@@ -376,13 +359,6 @@ cin >> choice;
   			cout << "You sapped 5 health!" << endl;
   			}
   			sleep(1);
-  			}//end spec if mana applies
-  			
-  			else { //out of mana
-  			cout << "\nOut of mana. You hit the enemy with a normal attack for" << basedmg << endl;
-  			h3 -= basedmg;
-  					}//ends out out of mana
-  					
   			}//end special attack
   		
   		cout << "You take " << d3 << " damage!\n\n\n\n\n" << endl;//damage taken
@@ -474,7 +450,6 @@ cin >> choice;
   	
   				//start special attack
   				else {
-  				if (mana > 0) {
   				sleep(1);
   				cout << "You use a special attack." << endl;
   				mana -= 1;
@@ -513,12 +488,6 @@ cin >> choice;
   				cout << "You sapped 5 health!" << endl;
   				}
   				sleep(1);
-  				}//end spec if mana applies
-  			
-  			else { //out of mana
-  			cout << "\nOut of mana. You hit the enemy with a normal attack for" << basedmg << endl;
-  			h4 -= basedmg;
-  					}//ends if out of mana
   				}//end special attack
   		
   				cout << "You take " << d4 << " damage!\n\n\n\n\n" << endl;//damage taken
@@ -603,7 +572,6 @@ cin >> choice;
   	
   				//start special attack
   				else {
-  				if (mana > 0) {
   				sleep(1);
   				cout << "You use a special attack." << endl;
   				mana -= 1;
@@ -659,18 +627,6 @@ cin >> choice;
   				cout << "You sapped 5 health!" << endl;
   				}
   				sleep(1);
-  				}//end spec if mana applies
-  			
-  			else { //out of mana
-  			if (s1==1) {
-  			cout << "\nOut of mana. You hit the enemy with a normal attack for" << basedmg << endl;
-  			h5 -= basedmg;
-  						}
-  			if (s2==1) {
-  			cout << "\nOut of mana. You hit the enemy with a normal attack for" << lsword << endl;
-  			h5 -= lsword;
-  						}			
-  					}//ends out out of mana
   				}//end special attack
   		
   				cout << "You take " << d5 << " damage!\n\n\n\n\n" << endl;//damage taken
