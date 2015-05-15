@@ -473,8 +473,8 @@ cin >> choice;
   				}//end attack
   	
   				//start special attack
-  				if (mana > 0) {
   				else {
+  				if (mana > 0) {
   				sleep(1);
   				cout << "You use a special attack." << endl;
   				mana -= 1;
