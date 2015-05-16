@@ -857,7 +857,7 @@ sleep(3);
 
 cout << "You venture further into the cave." << endl;
 sleep(2);
-cout << "As you come up to the next room you see something on the wall." << endl;
+cout << "As you come up to the next room you see something scratched on the wall." << endl;
 sleep(2);
 cout << "\"It's a map.\"" << endl;
 sleep(2);
