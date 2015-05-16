@@ -44,6 +44,8 @@ int main()
 	int h4 = 30;//giant slime
 	int h5 = 25;//goblin chief
 	int h6 = 50;//troll
+	int h7 = 65;//Minotaur
+	int h7 = 150;//Hydra
 	
 
 cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa.(turn on your sound)\n" << endl;
@@ -184,7 +186,7 @@ sleep(2);
   			
   			//if there's not enough mana
   				if (mana < 1) {
-  					cout << "You don't have enough mana!" << endl;
+  					cout << "You are all out of mana!" << endl;
   				}
   			sleep(1);
   		}//end special attack
@@ -284,7 +286,7 @@ cin >> choice;
   			
   			//if there's not enough mana
   				if (mana < 1) {
-  					cout << "You don't have enough mana!" << endl;
+  					cout << "You are all out of mana!" << endl;
   				}
   			sleep(1);
   		}//end special attack
@@ -376,7 +378,7 @@ cin >> choice;
   			
   			//if there's not enough mana
   				if (mana < 1) {
-  					cout << "You don't have enough mana!" << endl;
+  					cout << "You are all out of mana!" << endl;
   				}
   			sleep(1);
   			}//end special attack
@@ -513,7 +515,7 @@ cin >> choice;
   				
   				//if there's not enough mana
   				if (mana < 1) {
-  					cout << "You don't have enough mana!" << endl;
+  					cout << "You are all out of mana!" << endl;
   				}
   				sleep(1);
   				}//end special attack
@@ -668,7 +670,7 @@ while (h5 >= 1) {//goblin chief attack
   				
   				//if there's not enough mana
   				if (mana < 1) {
-  					cout << "You don't have enough mana!" << endl;
+  					cout << "You are all out of mana!" << endl;
   				}
   				sleep(1);
   				}//end special attack
@@ -831,7 +833,7 @@ while (h6 >= 1) {//giant troll attack
   				
   				//if there's not enough mana
   				if (mana < 1) {
-  					cout << "You don't have enough mana!" << endl;
+  					cout << "You are all out of mana!" << endl;
   				}
   				sleep(1);
   				}//end special attack
@@ -841,15 +843,90 @@ while (h6 >= 1) {//giant troll attack
   		
   				sleep(2);
   			}//end giant troll attack
+  			
 	
 cout << "You thrust your blade into the troll's chest, spewing blood everywhere." << endl;
 sleep(2);
 cout << "Blinded with blood in your eyes; you spin around hacking the beast's grotesque head off." << endl;	
 sleep(2);	
-cout << "It hits the ground with a *thump*" << endl;
+cout << "It hits the ground with a *thump*\n" << endl;
+sleep(3);
+
+//start minotaur fight
+
+
+cout << "You venture further into the cave." << endl;
 sleep(2);
-		
-		
+cout << "As you come up to the next room you see something on the wall." << endl;
+sleep(2);
+cout << "\"It's a map.\"" << endl;
+sleep(2);
+cout << "You decide to look at it." << endl;
+sleep(2);
+cout << "                 +        +                   " << endl;
+cout << "                 |        |                   " << endl;
+cout << "                 |   V    |                   " << endl;
+cout << "                 |        |                   " << endl;
+cout << "                 |        |                   " << endl;
+cout << "                 |        |                   " << endl;
+cout << "+----------------+        +------------------+" << endl;
+cout << "|                                            |" << endl;
+cout << "|                                            |" << endl;
+cout << "|                                            |" << endl;
+cout << "|                                            |" << endl;
+cout << "|                 +--------+                 |" << endl;
+cout << "|              +---XXXXXXXX+--+              |" << endl;
+cout << "|            +-+XXXXXXXXXXXXXX+-+            |" << endl;
+cout << "|           ++XXXXXXXXXXXXXXXXXX++           |" << endl;
+cout << "|           |XXXXXXXXXXXXXXXXXXXX|           |" << endl;
+cout << "|           ++XXXXXXXXXXXXXXXXXX++           |" << endl;
+cout << "|            +-+XXXXXXXXXXXXXX+-+            |" << endl;
+cout << "|              +--+XXXXXXXX+--+              |" << endl;
+cout << "|                 +--------+                 |" << endl;
+cout << "|                                            |" << endl;
+cout << "|                                            |" << endl;
+cout << "|                                            |" << endl;
+cout << "|                                            |" << endl;
+cout << "+----------------+         +-----------------+" << endl;
+cout << "                 |         |                  " << endl;
+cout << "                 |         |                  " << endl;
+cout << "                 |         |                  " << endl;
+cout << "                 |         |                  " << endl;
+cout << "                 |         +-----------------+" << endl;
+cout << "                 |                            " << endl;
+cout << "                 |                            " << endl;
+cout << "                 |                            " << endl;
+cout << "                 +---------------------------+" << endl;
+sleep(5);
+
+cout << "Theres something written in blood below it." << endl;
+sleep(2);
+cout << " ▄▀▀█▄▄   ▄▀▀█▄▄▄▄  ▄▀▀▄    ▄▀▀▄  ▄▀▀█▄   ▄▀▀▄▀▀▀▄  ▄▀▀█▄▄▄▄ " << endl;
+cout << "▐ ▄▀   █ ▐  ▄▀   ▐ █   █    ▐  █ ▐ ▄▀ ▀▄ █   █   █ ▐  ▄▀   ▐ " << endl;
+cout << "  █▄▄▄▀    █▄▄▄▄▄  ▐  █        █   █▄▄▄█ ▐  █▀▀█▀    █▄▄▄▄▄  " << endl;
+cout << "  █   █    █    ▌    █   ▄    █   ▄▀   █  ▄▀    █    █    ▌  " << endl;
+cout << " ▄▀▄▄▄▀   ▄▀▄▄▄▄      ▀▄▀ ▀▄ ▄▀  █   ▄▀  █     █    ▄▀▄▄▄▄   " << endl;
+cout << " █   ▐    █    ▐            ▀    ▐   ▐   ▐     ▐    █    ▐   " << endl;
+cout << "▐         ▐                                         ▐        " << endl;
+sleep(5);
+
+cout << "Chills run down your spine." << endl;
+sleep(2);
+cout << "You warily enter the giant room." << endl;
+sleep(2);
+cout << "Piles of bones are scattered across the room, and in the center you see something." << endl;
+sleep(2);
+cout << "It's giant pool of swirling water." << endl;
+sleep(2);
+cout << "A 3 headed beast rises out of the water" << endl;
+sleep(2);
+cout << "Its a Hydra!" << endl;
+sleep(2);
+
+//start Hydra fight
+
+
+
 
 
 }//ends life statement
