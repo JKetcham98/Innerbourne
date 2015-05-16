@@ -45,7 +45,7 @@ int main()
 	int h5 = 25;//goblin chief
 	int h6 = 50;//troll
 	int h7 = 65;//Minotaur
-	int h7 = 150;//Hydra
+	int h8 = 150;//Hydra
 	
 
 cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa.(turn on your sound)\n" << endl;
@@ -113,7 +113,7 @@ cout << "As you head down the path you come across a slimy beast!" << endl;
 sleep(2);
 
 //Slime battle   
-  while (h1 >= 1) {
+  while (h1 >= 1 && health >= 1) {
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h1 << " health.\n" << endl;
   	
@@ -213,7 +213,7 @@ cin >> choice;
 	//Goblin battle   
 	cout << "A goblin pounces out at you!" << endl;
 	sleep(2);
-  	while (h2 >= 1) {
+  	while (h2 >= 1 && health >= 1) {
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h2 << " health.\n" << endl;
   	
@@ -305,7 +305,7 @@ cin >> choice;
 	else {  
  	cout << "A skeleton charges at you!" << endl;
  	sleep(2);
- 	 while (h3 >= 1) {
+ 	 while (h3 >= 1 && health >= 1) {
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h3 << " health.\n" << endl;
   	
@@ -442,7 +442,7 @@ cin >> choice;
 		sleep(2);
 		cout << "You pull out your dagger...." << endl;
 		}
-			while (h4 >= 1) {//giant slime battle
+			while (h4 >= 1 && health >= 1) {//giant slime battle
     			cout << "You have " << health << " health, and " << mana << " mana." << endl;
   				cout << "It has " << h4 << " health.\n" << endl;
   	
@@ -565,7 +565,7 @@ cin >> choice;
 			cout << "You take out your dagger, ready for an attack.\n" << endl;
 			}
 sleep(2);
-while (h5 >= 1) {//goblin chief attack
+while (h5 >= 1 && health >= 1) {//goblin chief attack
     			cout << "You have " << health << " health, and " << mana << " mana." << endl;
   				cout << "It has " << h5 << " health.\n" << endl;
   	
@@ -683,8 +683,8 @@ while (h5 >= 1) {//goblin chief attack
 cout << "The goblin falls, dropping a health potion" << endl;
 sleep(2); 
 cout << "You drink the potion, it makes you feel better" << endl;
-health += 50;
-mana += 5;
+health += 125;
+mana += 7;
 sleep(2);
 cout << "Down the staircase you go, as the air gets more musky and humid" << endl;
 sleep(2);
@@ -728,7 +728,7 @@ if (s3 == 1) {
 	cout << "You pull out your claymore, ready to fight" << endl;
 	sleep(2);
 	}
-while (h6 >= 1) {//giant troll attack
+while (h6 >= 1 && health >= 1) {//giant troll attack
     			cout << "You have " << health << " health, and " << mana << " mana." << endl;
   				cout << "It has " << h6 << " health.\n" << endl;
   	
@@ -852,8 +852,122 @@ sleep(2);
 cout << "It hits the ground with a *thump*\n" << endl;
 sleep(3);
 
-//start minotaur fight
 
+while (h7 >= 1 && health >= 1) {//start minotaur fight
+    			cout << "You have " << health << " health, and " << mana << " mana." << endl;
+  				cout << "It has " << h7 << " health.\n" << endl;
+  	
+  				cout << "What would you like to do?" << endl;
+  				cout << "1.Attack!\n2.Special attack(1 mana)!" << endl;
+
+  				cin >> choice;
+  				//character damage
+				
+				srand(time(NULL));//so RNG does not repeat the same number 
+				int claymore = rand() %30 + 10;//third weapon
+				srand(time(NULL));
+				int lsword = rand() %20 + 5;//second weapon
+				//enemy damage
+				srand(time(NULL));
+				int d7 = rand() %30 + 3;//minotaur
+				//RNG Special attack
+				srand(time(NULL));
+				int spec = rand() %4 + 1;
+  	
+  				//start attack
+  				if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
+  					if (s2 == 1) {
+  						sleep(1);
+  						cout << "You chose attack!" << endl;
+  						sleep(1);
+  						cout << "\nYou deal " << lsword << " damage!" << endl;//damage dealt statement
+  						h7 -= lsword;//subtract health from enemy
+  						sleep(1);
+  					}
+  					if (s3 == 1) {
+  						sleep(1);
+  						cout << "You chose attack!" << endl;
+  						sleep(1);
+  						cout << "\nYou deal " << claymore << " damage!" << endl;//damage dealt statement
+  						h7 -= claymore;//subtract health from enemy
+  						sleep(1);
+  					}
+  				}//end attack
+  	
+  				//start special attack
+  				else {			
+  				sleep(1);
+  				cout << "You use a special attack." << endl;
+  				sleep(1);
+  				//Hallowed blaze + 10 base damage
+  				if (spec == 1 && mana >= 1) {
+  				cout << "You used Hallowed Blaze!" << endl;
+  				h7 -= 15;
+  				sleep(1);
+  				cout << "You dealt 15 damage!" << endl;
+  				mana -= 1;
+  				}
+  			
+  				//Critical slash x2
+  				if (spec == 2 && mana >= 1) {
+  					if (s3 == 1) {
+  						cout << "You used Critical Smite!" << endl;
+  						h7 -= (claymore + 7);
+  						sleep(1);
+  						cout << "You dealt " << claymore + 7 << " damage!" << endl;
+  						mana -= 1;
+  					}
+  					if (s2 == 1) {
+  						cout << "You used Critical Smite!" << endl;
+  						h7 -= (lsword * 2);
+  						sleep(1);
+  						cout << "You dealt " << lsword * 2 << " damage!" << endl;
+  						mana -= 1;
+  					}
+  				}
+  			
+  				//Divine infusion 4 + normal attack
+  				if (spec == 3 && mana >= 1) {
+  					if (s3 == 1) {
+  						cout << "You used Divine Infusion!" << endl;
+  						h7 -= 4;
+  						h7 -= claymore;
+  						sleep(1);
+  						cout << "You dealt " << claymore + 4 << " damage!" << endl;
+  						mana -= 1;
+					} 
+					if (s2 == 1) {
+  						cout << "You used Divine Infusion!" << endl;
+  						h7 -= 10;
+  						h7 -= lsword;
+  						sleep(1);
+  						cout << "You dealt " << lsword + 10 << " damage!" << endl;
+  						mana -= 1;
+					} 				
+  				}
+  				
+  				//Vitalic Drain saps 5 hp
+  				if (spec == 4 && mana >= 1) {
+  				cout << "You used Vitalic Drain!" << endl;
+  				h7 -= 10;
+  				health += 10;
+  				sleep(1);
+  				cout << "You sapped 10 health!" << endl;
+  				mana -= 1;
+  				}
+  				
+  				//if there's not enough mana
+  				if (mana < 1) {
+  					cout << "You are all out of mana!" << endl;
+  				}
+  				sleep(1);
+  				}//end special attack
+  		
+  				cout << "You take " << d7 << " damage!\n\n\n\n\n" << endl;//damage taken
+  				health -= d7;
+  		
+  				sleep(2);
+  			}//end minotaur attack
 
 cout << "You venture further into the cave." << endl;
 sleep(2);
