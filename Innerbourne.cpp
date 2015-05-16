@@ -843,8 +843,11 @@ while (h6 >= 1) {//giant troll attack
   			}//end giant troll attack
 	
 cout << "You thrust your blade into the troll's chest, spewing blood everywhere." << endl;
-cout << "Blinded with blood in your eyes; you spin around hacking the beast's grotesque head off." << endl;		
+sleep(2);
+cout << "Blinded with blood in your eyes; you spin around hacking the beast's grotesque head off." << endl;	
+sleep(2);	
 cout << "It hits the ground with a *thump*" << endl;
+sleep(2);
 		
 		
 
