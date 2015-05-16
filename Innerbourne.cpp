@@ -581,7 +581,7 @@ while (h5 >= 1 && health >= 1) {//goblin chief attack
 				int lsword = rand() %20 + 5;//second weapon
 				//enemy damage
 				srand(time(NULL));
-				int d5 = rand() %15 + 8;//goblin chief
+				int d5 = rand() %15 + 4;//goblin chief
 				//RNG Special attack
 				srand(time(NULL));
 				int spec = rand() %4 + 1;
@@ -744,7 +744,7 @@ while (h6 >= 1 && health >= 1) {//giant troll attack
 				int lsword = rand() %20 + 5;//second weapon
 				//enemy damage
 				srand(time(NULL));
-				int d6 = rand() %25 + 8;//giant troll
+				int d6 = rand() %20 + 1;//giant troll
 				//RNG Special attack
 				srand(time(NULL));
 				int spec = rand() %4 + 1;
@@ -852,6 +852,13 @@ sleep(2);
 cout << "It hits the ground with a *thump*\n" << endl;
 sleep(3);
 
+
+cout << "You walk down a passage hearing a sound." << endl;
+sleep(2);
+cout << "Theres a hulking shadow in the distance." << endl;	
+sleep(2);	
+cout << "You find a raging minotaur!\n" << endl;
+sleep(3);
 
 while (h7 >= 1 && health >= 1) {//start minotaur fight
     			cout << "You have " << health << " health, and " << mana << " mana." << endl;
@@ -1026,13 +1033,13 @@ sleep(5);
 
 cout << "Chills run down your spine." << endl;
 sleep(2);
-cout << "You warily enter the giant room." << endl;
+cout << "You warily enter the giant chamber." << endl;
 sleep(2);
 cout << "Piles of bones are scattered across the room, and in the center you see something." << endl;
 sleep(2);
 cout << "It's giant pool of swirling water." << endl;
 sleep(2);
-cout << "A 3 headed beast rises out of the water" << endl;
+cout << "A 3 headed beast rises out of the water." << endl;
 sleep(2);
 cout << "Its a Hydra!" << endl;
 sleep(2);
@@ -1044,7 +1051,7 @@ sleep(2);
 
 
 }//ends life statement
-else {//starts death statement
+if (health <= 0) {//starts death statement
 cout << " ▄▀▀▀▀▄    ▄▀▀█▄   ▄▀▀▄ ▄▀▄  ▄▀▀█▄▄▄▄      ▄▀▀▀▀▄   ▄▀▀▄ ▄▀▀▄  ▄▀▀█▄▄▄▄  ▄▀▀▄▀▀▀▄ " << endl;
 cout << "█         ▐ ▄▀ ▀▄ █  █ ▀  █ ▐  ▄▀   ▐     █      █ █   █    █ ▐  ▄▀   ▐ █   █   █ " << endl;
 cout << "█    ▀▄▄    █▄▄▄█ ▐  █    █   █▄▄▄▄▄      █      █ ▐  █    █    █▄▄▄▄▄  ▐  █▀▀█▀ " << endl;
