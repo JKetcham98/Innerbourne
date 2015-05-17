@@ -18,6 +18,7 @@ int main()
 { 	//player stats
 	int health = 100;//player health
 	int mana = 5;//player mana
+	string name = "0";//player name
 	
 	
 	
@@ -47,7 +48,10 @@ int main()
 	int h7 = 65;//Minotaur
 	int h8 = 150;//Hydra
 	
-
+cout << "Please enter your name." << endl;
+cin >> name;
+sleep(2);
+cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa.(turn on your sound)\n" << endl;
 sleep(3);
 cout << "  ██▓ ███▄    █  ███▄    █ ▓█████  ██▀███     	   ▄▄▄▄    ▒█████   ██▀███   █    ██  ███▄    █ ▓█████ " << endl;
