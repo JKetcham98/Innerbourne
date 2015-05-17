@@ -146,6 +146,12 @@ sleep(2);
   		sleep(1);
   		cout << "You use a special attack." << endl;
   		sleep(1);
+  		
+  			//if there's not enough mana
+  				if (mana < 1) {
+  					cout << "You are all out of mana!" << endl;
+  				}
+  				
   			//Hallowed blaze + 10 base damage
   			if (spec == 1 && mana >= 1) {
   			cout << "You used Hallowed Blaze!" << endl;
@@ -184,10 +190,7 @@ sleep(2);
   			mana -= 1;
   			}
   			
-  			//if there's not enough mana
-  				if (mana < 1) {
-  					cout << "You are all out of mana!" << endl;
-  				}
+  			
   			sleep(1);
   		}//end special attack
   		
@@ -246,6 +249,12 @@ cin >> choice;
   		sleep(1);
   		cout << "You use a special attack." << endl;
   		sleep(1);
+  		
+  			//if there's not enough mana
+  				if (mana < 1) {
+  					cout << "You are all out of mana!" << endl;
+  				}
+  				
   			//Hallowed blaze + 10 base damage
   			if (spec == 1 && mana >= 1) {
   			cout << "You used Hallowed Blaze!" << endl;
@@ -284,10 +293,7 @@ cin >> choice;
   			mana -= 1;
   			}
   			
-  			//if there's not enough mana
-  				if (mana < 1) {
-  					cout << "You are all out of mana!" << endl;
-  				}
+  			
   			sleep(1);
   		}//end special attack
   		
@@ -338,6 +344,12 @@ cin >> choice;
   		sleep(1);
   		cout << "You use a special attack." << endl;
   		sleep(1);
+  		
+  			//if there's not enough mana
+  				if (mana < 1) {
+  					cout << "You are all out of mana!" << endl;
+  				}
+  				
   			//Hallowed blaze + 10 base damage
   			if (spec == 1 && mana >= 1) {
   			cout << "You used Hallowed Blaze!" << endl;
@@ -376,10 +388,7 @@ cin >> choice;
   			mana -= 1;
   			}
   			
-  			//if there's not enough mana
-  				if (mana < 1) {
-  					cout << "You are all out of mana!" << endl;
-  				}
+  			
   			sleep(1);
   			}//end special attack
   		
@@ -475,6 +484,12 @@ cin >> choice;
   				sleep(1);
   				cout << "You use a special attack." << endl;
   				sleep(1);
+  				
+  				//if there's not enough mana
+  				if (mana < 1) {
+  					cout << "You are all out of mana!" << endl;
+  				}
+  				
   				//Hallowed blaze + 10 base damage
   				if (spec == 1 && mana >= 1) {
   				cout << "You used Hallowed Blaze!" << endl;
@@ -513,10 +528,7 @@ cin >> choice;
   				mana -= 1;
   				}
   				
-  				//if there's not enough mana
-  				if (mana < 1) {
-  					cout << "You are all out of mana!" << endl;
-  				}
+  				
   				sleep(1);
   				}//end special attack
   		
@@ -611,6 +623,12 @@ while (h5 >= 1 && health >= 1) {//goblin chief attack
   				sleep(1);
   				cout << "You use a special attack." << endl;
   				sleep(1);
+  				
+  				//if there's not enough mana
+  				if (mana < 1) {
+  					cout << "You are all out of mana!" << endl;
+  				}
+  				
   				//Hallowed blaze + 10 base damage
   				if (spec == 1 && mana >= 1) {
   				cout << "You used Hallowed Blaze!" << endl;
@@ -668,10 +686,7 @@ while (h5 >= 1 && health >= 1) {//goblin chief attack
   				mana -= 1;
   				}
   				
-  				//if there's not enough mana
-  				if (mana < 1) {
-  					cout << "You are all out of mana!" << endl;
-  				}
+  				
   				sleep(1);
   				}//end special attack
   		
@@ -774,6 +789,12 @@ while (h6 >= 1 && health >= 1) {//giant troll attack
   				sleep(1);
   				cout << "You use a special attack." << endl;
   				sleep(1);
+  				
+  				//if there's not enough mana
+  				if (mana < 1) {
+  					cout << "You are all out of mana!" << endl;
+  				}
+  				
   				//Hallowed blaze + 10 base damage
   				if (spec == 1 && mana >= 1) {
   				cout << "You used Hallowed Blaze!" << endl;
@@ -831,10 +852,7 @@ while (h6 >= 1 && health >= 1) {//giant troll attack
   				mana -= 1;
   				}
   				
-  				//if there's not enough mana
-  				if (mana < 1) {
-  					cout << "You are all out of mana!" << endl;
-  				}
+  				
   				sleep(1);
   				}//end special attack
   		
@@ -906,6 +924,12 @@ while (h7 >= 1 && health >= 1) {//start minotaur fight
   				sleep(1);
   				cout << "You use a special attack." << endl;
   				sleep(1);
+  				
+  				//if there's not enough mana
+  				if (mana < 1) {
+  					cout << "You are all out of mana!" << endl;
+  				}
+  				
   				//Hallowed blaze + 10 base damage
   				if (spec == 1 && mana >= 1) {
   				cout << "You used Hallowed Blaze!" << endl;
@@ -963,10 +987,7 @@ while (h7 >= 1 && health >= 1) {//start minotaur fight
   				mana -= 1;
   				}
   				
-  				//if there's not enough mana
-  				if (mana < 1) {
-  					cout << "You are all out of mana!" << endl;
-  				}
+  				
   				sleep(1);
   				}//end special attack
   		
