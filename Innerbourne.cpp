@@ -845,7 +845,7 @@ while (h6 >= 1 && health >= 1) {//giant troll attack
   			}//end giant troll attack
   			
 	
-cout << "You thrust your blade into the troll's chest, spewing blood everywhere." << endl;
+cout << "You thrust your blade into the troll's chest, spewing it's blood everywhere." << endl;
 sleep(2);
 cout << "Blinded with blood in your eyes; you spin around hacking the beast's grotesque head off." << endl;	
 sleep(2);	
