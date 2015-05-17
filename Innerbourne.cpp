@@ -12,7 +12,7 @@
 #include <stdio.h> //for time
 #include <fstream> //for art
 using namespace std;
-
+//notes:Do we have a attacking system for the dagger in late game?
 
 int main() 
 { 	//player stats
@@ -1068,9 +1068,125 @@ cout << "A 3 headed beast rises out of the water." << endl;
 sleep(2);
 cout << "Its a Hydra!" << endl;
 sleep(2);
-
 //start Hydra fight
+while (h8 >= 1 && health >= 1) {
+    			cout << "You have " << health << " health, and " << mana << " mana." << endl;
+  				cout << "It has " << h8 << " health.\n" << endl;
+  	
+  				cout << "What would you like to do?" << endl;
+  				cout << "1.Attack!\n2.Special attack(1 mana)!" << endl;
 
+  				cin >> choice;
+  				//character damage
+				
+				srand(time(NULL));//so RNG does not repeat the same number 
+				int claymore = rand() %30 + 10;//third weapon
+				srand(time(NULL));
+				int lsword = rand() %20 + 5;//second weapon
+				//enemy damage
+				srand(time(NULL));
+				int d8 = rand() %20 + 20;//hydra
+				//RNG Special attack
+				srand(time(NULL));
+				int spec = rand() %4 + 1;
+  	
+  				//start attack
+  				if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
+  					if (s2 == 1) {
+  						sleep(1);
+  						cout << "You chose attack!" << endl;
+  						sleep(1);
+  						cout << "\nYou deal " << lsword << " damage!" << endl;//damage dealt statement
+  						h8 -= lsword;//subtract health from enemy
+  						sleep(1);
+  					}
+  					if (s3 == 1) {
+  						sleep(1);
+  						cout << "You chose attack!" << endl;
+  						sleep(1);
+  						cout << "\nYou deal " << claymore << " damage!" << endl;//damage dealt statement
+  						h8 -= claymore;//subtract health from enemy
+  						sleep(1);
+  					}
+  				}//end attack
+  	
+  				//start special attack
+  				else {			
+  				sleep(1);
+  				cout << "You use a special attack." << endl;
+  				sleep(1);
+  				
+  				//if there's not enough mana
+  				if (mana < 1) {
+  					cout << "You are all out of mana!" << endl;
+  				}
+  				
+  				//Hallowed blaze + 10 base damage
+  				if (spec == 1 && mana >= 1) {
+  				cout << "You used Hallowed Blaze!" << endl;
+  				h8 -= 15;
+  				sleep(1);
+  				cout << "You dealt 15 damage!" << endl;
+  				mana -= 1;
+  				}
+  			
+  				//Critical slash x2
+  				if (spec == 2 && mana >= 1) {
+  					if (s3 == 1) {
+  						cout << "You used Critical Smite!" << endl;
+  						h8 -= (claymore + 7);
+  						sleep(1);
+  						cout << "You dealt " << claymore + 7 << " damage!" << endl;
+  						mana -= 1;
+  					}
+  					if (s2 == 1) {
+  						cout << "You used Critical Smite!" << endl;
+  						h8 -= (lsword * 2);
+  						sleep(1);
+  						cout << "You dealt " << lsword * 2 << " damage!" << endl;
+  						mana -= 1;
+  					}
+  				}
+  			
+  				//Divine infusion 4 + normal attack
+  				if (spec == 3 && mana >= 1) {
+  					if (s3 == 1) {
+  						cout << "You used Divine Infusion!" << endl;
+  						h8 -= 4;
+  						h8 -= claymore;
+  						sleep(1);
+  						cout << "You dealt " << claymore + 4 << " damage!" << endl;
+  						mana -= 1;
+					} 
+					if (s2 == 1) {
+  						cout << "You used Divine Infusion!" << endl;
+  						h8 -= 10;
+  						h8 -= lsword;
+  						sleep(1);
+  						cout << "You dealt " << lsword + 10 << " damage!" << endl;
+  						mana -= 1;
+					} 				
+  				}
+  				
+  				//Vitalic Drain saps 5 hp
+  				if (spec == 4 && mana >= 1) {
+  				cout << "You used Vitalic Drain!" << endl;
+  				h8 -= 10;
+  				health += 10;
+  				sleep(1);
+  				cout << "You sapped 10 health!" << endl;
+  				mana -= 1;
+  				}
+  				
+  				
+  				sleep(1);
+  				}//end special attack
+  		
+  				cout << "You take " << d8 << " damage!\n\n\n\n\n" << endl;//damage taken
+  				health -= d8;
+  		
+  				sleep(2);
+  			}//end hydra fight
 
 
 
