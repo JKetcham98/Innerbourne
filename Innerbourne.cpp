@@ -12,7 +12,7 @@
 #include <stdio.h> //for time
 #include <fstream> //for art
 using namespace std;
-//notes:Do we have a attacking system for the dagger in late game?
+
 
 int main() 
 { 	//player stats
@@ -24,11 +24,11 @@ int main()
 	
 	
 	//interaction
-	string i1 = "0";//first interaction
 	string choice = "0";//variable for choices
+	string i1 = "0";//first interaction
 	string i2 = "0";//second interaction
-	string i3 = "0";//third
-	string i4 = "0";//fourth
+	string i3 = "0";//third interaction
+	string i4 = "0";//fourth interaction
 
 
 	//sword identifiers
@@ -1168,7 +1168,7 @@ while (h8 >= 1 && health >= 1) {
 					} 				
   				}
   				
-  				//Vitalic Drain saps 5 hp
+  				//Vitalic Drain saps 10 hp
   				if (spec == 4 && mana >= 1) {
   				cout << "You used Vitalic Drain!" << endl;
   				h8 -= 10;
