@@ -46,16 +46,17 @@ int main()
 	int h6 = 50;//troll
 	int h7 = 65;//Minotaur
 	int h8 = 150;//Hydra
+	int h9 = 200;//Sentinel 
 	
 cout << "Please enter your name." << endl;
 cin >> name;
 sleep(2);
 cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
-cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa.(turn on your sound)\n" << endl;
+cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa.(Dont spam buttons)\n" << endl;
 sleep(3);
 cout << " ▄█  ███▄▄▄▄   ███▄▄▄▄      ▄████████    ▄████████      ▀█████████▄   ▄██████▄  ███    █▄     ▄████████ ███▄▄▄▄      ▄████████ " << endl;
 cout << "███  ███▀▀▀██▄ ███▀▀▀██▄   ███    ███   ███    ███        ███    ███ ███    ███ ███    ███   ███    ███ ███▀▀▀██▄   ███    ███ " << endl;
-cout << "███▌ ███   ███ ███   ███   ███    █▀    ███    ███        ███    ███ ███    ███ ███    ███   ███    ███ ███   ███   ███    █▀   << endl;
+cout << "███▌ ███   ███ ███   ███   ███    █▀    ███    ███        ███    ███ ███    ███ ███    ███   ███    ███ ███   ███   ███    █▀  " << endl;
 cout << "███▌ ███   ███ ███   ███  ▄███▄▄▄      ▄███▄▄▄▄██▀       ▄███▄▄▄██▀  ███    ███ ███    ███  ▄███▄▄▄▄██▀ ███   ███  ▄███▄▄▄     " << endl;
 cout << "███▌ ███   ███ ███   ███ ▀▀███▀▀▀     ▀▀███▀▀▀▀▀        ▀▀███▀▀▀██▄  ███    ███ ███    ███ ▀▀███▀▀▀▀▀   ███   ███ ▀▀███▀▀▀     " << endl;
 cout << "███  ███   ███ ███   ███   ███    █▄  ▀███████████        ███    ██▄ ███    ███ ███    ███ ▀███████████ ███   ███   ███    █▄  " << endl;
@@ -76,7 +77,7 @@ sleep(2);
 
 if (health >= 1){//makes sure it ends when you die
 
-cout << "Read it up(y/n)?" << endl;
+cout << "Read it?(y/n)" << endl;
 cin >> i1;
 	if (i1 == "y" || i1 == "yes" || i1 == "Yes" || i1 == "Y" ) {
 	cout << "You read the note." << endl;
@@ -1283,7 +1284,7 @@ cout << "A marbel pedestal rises out of the center of the pool. " << endl;
 sleep(2);
 cout << "In the center of the pedestal, lays the holy blade. " << endl;
 sleep(2);
-cout << "Excalibur. " << endl;
+cout << "Excalibur." << endl;
 sleep(2);
 cout << "You walk over and pick it up. " << endl;
 sleep(2);
@@ -1292,7 +1293,7 @@ sleep(2);
 cout << "Engraved on the hilt you find the words. " << endl;
 sleep(2);
 cout << "\"Take me up\" " << endl;
-sleep(2);
+sleep(1);
 cout << "\"Cast me away\" " << endl;
 sleep(2);
 cout << "Below that, your name begins to form on the blade. " << endl;
@@ -1308,7 +1309,187 @@ cout << "*Health up* " << endl;
 sleep(1);
 cout << "*Mana up* " << endl;
 sleep(2);
+health += 300;
+mana += 20;
+cout << "With this newfound power, you walk towards the final chamber, the final battle." << endl;
+sleep(2);
+cout << "You're at the chambers entrance when suddenly, a stone sentinel blocks your path!" << endl;
+sleep(2);
+cout << "You take out excalibur, eager for a test run" << endl;
+sleep(2);
+while (h9 >= 1 && health >= 1) {
+    cout << "You have " << health << " health, and " << mana << " mana." << endl;
+  	cout << "It has " << h9 << " health.\n" << endl;
+  	
+  	cout << "What would you like to do?" << endl;
+  	cout << "1.Attack!\n2.Special attack(1 mana)!" << endl;
 
+  	cin >> choice;
+  	//character damage
+	srand(time(NULL));//so RNG does not repeat the same number 
+	int hsword = rand() %75 + 25;//excalibur
+	//enemy damage
+	srand(time(NULL));
+	int d9 = rand() %20 + 10;//sentinel 
+	//RNG Special attack
+	srand(time(NULL));
+	int spec = rand() %4 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int slash1 = rand() %5 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int slash2 = rand() %10 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int slash3 = rand() %10 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int slash4 = rand() %10 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int super = rand() %100 + 1;
+  	
+  		//start attack
+  		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
+  		sleep(1);
+  		cout << "You chose attack!" << endl;
+  		sleep(1);
+  		cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  		h9 -= hsword;//subtract health from enemy
+  		sleep(1);
+  		if (slash1 == 7) {
+  			sleep(1);
+  			cout << "You blinded the enemy with your holy light!" << endl;
+  			sleep(2);
+  			cout << "You attack while its blinded!" << endl;
+  			sleep(2);
+  			cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  			h9 -= hsword;//subtract health from enemy
+  				if (slash2 == 7) {
+  				sleep(2);
+  				cout << "Triple Hit!" << endl;
+  				sleep(2);
+  				cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  				h9 -= hsword;//subtract health from enemy
+  					if (slash3 == 7) {
+  					sleep(2);
+  					cout << "Quadruple Hit!" << endl;
+  					sleep(2);
+  					cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  					h9 -= hsword;//subtract health from enemy
+  						if (slash4 == 7) {
+  						sleep(2);
+  						cout << "Quintuple Hit!" << endl;
+  						sleep(2);
+  						cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  						h9 -= hsword;//subtract health from enemy
+  							if (h9 <= 0) {
+  								cout << "████▄     ▄   ▄███▄   █▄▄▄▄     █  █▀ ▄█ █    █     " << endl;
+  								cout << "█   █      █  █▀   ▀  █  ▄▀     █▄█   ██ █    █     " << endl;
+  								cout << "█   █ █     █ ██▄▄    █▀▀▌      █▀▄   ██ █    █     " << endl;
+  								cout << "▀████  █    █ █▄   ▄▀ █  █      █  █  ▐█ ███▄ ███▄  " << endl;
+  								cout << "        █  █  ▀███▀     █         █    ▐     ▀    ▀ " << endl;
+  								cout << "         █▐            ▀         ▀                  " << endl;
+  								cout << "         ▐                                          " << endl;
+  							}	
+  						}
+					}  				
+  				}
+  			}
+  			
+  		}//end attack
+  	
+  		//start special attack
+  		else {
+  		sleep(1);
+  		cout << "You use a special attack." << endl;
+  		sleep(1);
+  		
+  			//if there's not enough mana
+  				if (mana < 1) {
+  					cout << "You are all out of mana!" << endl;
+  				}
+  				
+  			//Hallowed blaze + 10 base damage
+  			if (spec == 1 && mana >= 1) {
+  			cout << "You used Hallowed Blaze!" << endl;
+  			h9 -= 50;
+  			sleep(1);
+  			cout << "You dealt 50 damage!" << endl;
+  			mana -= 1;
+  			}
+  			
+  			//Critical slash x2
+  			if (spec == 2 && mana >= 1) {
+  			cout << "You used Critical Smite!" << endl;
+  			h9 -= (hsword * 2);
+  			sleep(1);
+  			cout << "You dealt " << hsword * 2 << " damage!" << endl;
+  			mana -= 1;
+  			}
+  			
+  			//Divine infusion 10 + normal attack
+  			if (spec == 3 && mana >= 1) {
+  			cout << "You used Divine Infusion!" << endl;
+  			h9 -= 10;
+  			h9 -= hsword;
+  			sleep(1);
+  			cout << "You dealt " << hsword + 10 << " damage!" << endl;
+  			mana -= 1;
+  			}
+  			
+  			//Angelic Drain saps 20 hp
+  			if (spec == 4 && mana >= 1) {
+  			cout << "You used Angelic Drain!" << endl;
+  			h9 -= 20;
+  			health += 20;
+  			mana += 10;
+  			sleep(1);
+  			cout << "You sapped 20 health!" << endl;
+  			mana -= 1;
+  			}
+  			
+  			//Assassination
+  			if (super == 5 && mana >= 2) {
+  			cout << "Your Blade glows a Golden Yellow" << endl;
+  			h9 -= 200;
+  			health += 200;
+  			sleep(1);
+  			cout << "You dealt 200 damage!" << endl;
+  			mana -= 2;
+  			}
+  			
+  			
+  			sleep(1);
+  		}//end special attack
+  		
+  		cout << "You take " << d9 << " damage!\n\n\n\n\n" << endl;//damage taken
+  		health -= d9;
+  		
+  	sleep(2);
+  	if (health <= 0) {//starts death statement
+					cout << "   ▄██████▄     ▄████████   ▄▄▄▄███▄▄▄▄      ▄████████       ▄██████▄   ▄█    █▄     ▄████████    ▄████████ " << endl;
+					cout << "  ███    ███   ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███      ███    ███ ███    ███   ███    ███   ███    ███ " << endl;
+					cout << "  ███    █▀    ███    ███ ███   ███   ███   ███    █▀       ███    ███ ███    ███   ███    █▀    ███    ███ " << endl;
+					cout << " ▄███          ███    ███ ███   ███   ███  ▄███▄▄▄          ███    ███ ███    ███  ▄███▄▄▄      ▄███▄▄▄▄██▀ " << endl;
+					cout << "▀▀███ ████▄  ▀███████████ ███   ███   ███ ▀▀███▀▀▀          ███    ███ ███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   " << endl;
+					cout << "  ███    ███   ███    ███ ███   ███   ███   ███    █▄       ███    ███ ███    ███   ███    █▄  ▀███████████ " << endl;
+					cout << "  ███    ███   ███    ███ ███   ███   ███   ███    ███      ███    ███ ███    ███   ███    ███   ███    ███ " << endl;
+					cout << "  ████████▀    ███    █▀   ▀█   ███   █▀    ██████████       ▀██████▀   ▀██████▀    ██████████   ███    ███ " << endl;
+					return 0; }//ends death statement
+  	}//end fight
+  	
+cout << "The sentinel crumbles into dust under the might of Excalibur" << endl;
+sleep(2);
+cout << "The Blade's energy surging through you compels you to go on into the final chamber." << endl;
+sleep(2);
+cout << "\"This is it.\"" << endl; 
+sleep(4);
+cout << "You walk towards the the chamber's gate," << endl;
+sleep(2);
+cout << "It gets hotter the closer you get" << endl;
+sleep(2);
 
 
 
