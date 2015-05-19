@@ -35,7 +35,6 @@ int main()
 	int s1 = 1;//dagger
 	int s2 = 0;//long sword
 	int s3 = 0;//claymore
-	int s4 = 0;//excalibur 
 
 	
 	//enemy health
@@ -1266,6 +1265,49 @@ while (h8 >= 1 && health >= 1) {
 					cout << "  ████████▀    ███    █▀   ▀█   ███   █▀    ██████████       ▀██████▀   ▀██████▀    ██████████   ███    ███ " << endl;
 					return 0; }//ends death statement
   			}//end hydra fight
+  			
+  			
+//excalibur 
+sleep(2);
+cout << "In one fell swoop, all 3 of the Hydra's heads are sliced off. " << endl;
+sleep(2);
+cout << "Green blood gushes out of the 3 flailing stumps. " << endl;
+sleep(2);
+cout << "The dead body slowly sinks into the pool. " << endl;
+sleep(2);
+cout << "It quickly vanishes from sight. " << endl;
+sleep(2);
+cout << "A few moments later, the chamber starts to rumble and shake. " << endl;
+sleep(2);
+cout << "A marbel pedestal rises out of the center of the pool. " << endl;
+sleep(2);
+cout << "In the center of the pedestal, lays the holy blade. " << endl;
+sleep(2);
+cout << "Excalibur. " << endl;
+sleep(2);
+cout << "You walk over and pick it up. " << endl;
+sleep(2);
+cout << "You feel blessed. " << endl;
+sleep(2);
+cout << "Engraved on the hilt you find the words. " << endl;
+sleep(2);
+cout << "\"Take me up\" " << endl;
+sleep(2);
+cout << "\"Cast me away\" " << endl;
+sleep(2);
+cout << "Below that, your name begins to form on the blade. " << endl;
+sleep(2);
+cout << "\"" << name << "\" " << endl;
+sleep(4);
+
+cout << "*Damage up* " << endl;
+sleep(1);
+cout << "*Special up* " << endl;
+sleep(1);
+cout << "*Health up* " << endl;
+sleep(1);
+cout << "*Mana up* " << endl;
+sleep(2);
 
 
 
