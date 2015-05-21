@@ -47,7 +47,7 @@ int main()
 	int h7 = 65;//Minotaur
 	int h8 = 150;//Hydra
 	int h9 = 200;//Sentinel 
-	int h10 = ;//Inferno demon
+	int h10 = 125;//Inferno demon
 cout << "Please enter your name." << endl;
 cin >> name;
 sleep(2);
@@ -1071,7 +1071,8 @@ while (h7 >= 1 && health >= 1) {//start minotaur fight
   			}//end minotaur attack
 sleep(2);
 cout << "You slay the minotaur and it drops a health potion." << endl;
-health += 100
+health += 25;
+mana += 5;
 sleep(2);
 cout << "You venture further into the cave." << endl;
 sleep(2);
@@ -1157,7 +1158,7 @@ while (h8 >= 1 && health >= 1) {
 				int lsword = rand() %20 + 5;//second weapon
 				//enemy damage
 				srand(time(NULL));
-				int d8 = rand() %20 + 20;//hydra
+				int d8 = rand() %5 + 15;//hydra
 				//RNG Special attack
 				srand(time(NULL));
 				int spec = rand() %4 + 1;
