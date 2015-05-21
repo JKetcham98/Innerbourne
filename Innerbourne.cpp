@@ -47,7 +47,9 @@ int main()
 	int h7 = 65;//Minotaur
 	int h8 = 150;//Hydra
 	int h9 = 200;//Sentinel 
-	int h10 = 125;//Inferno demon
+	int h10 = 200;//Inferno demon form
+	int h11 = 400;//Snake form
+	int h12 = 700;//final Satan form
 cout << "Please enter your name." << endl;
 cin >> name;
 if (name == "213374u") {
@@ -136,10 +138,16 @@ cin >> i1;
 	sleep(2);
 	cout << "\"They were known as\"" << endl;
 	sleep(5);
+	if (name == "Innerborune" || name == "innerborune" ) {
+	
+	cout << "\"Innerborune\"" << endl;
+		}
+	else {
 	cout << "\"Innerbourne\"" << endl;
+		}
 	sleep(2);
 	cout << "The rest is illegible." << endl; 
-    	}//note interaction
+    		}//note interaction
 	else {
 	cout << "\"Must be nothing.\"" << endl;    
     	}
@@ -1733,20 +1741,362 @@ while (h10 >= 1 && health >= 1) {
   	}//end fight
 
 //end first
+cout << "You quench its demonic flames with the light of your holy blade." << endl;
+sleep(2);
+cout << "The beast writhers and twists into a giant snake!" << endl;
+sleep(2);
 
 //start second phase
+while (h11 >= 1 && health >= 1) {
+    cout << "You have " << health << " health, and " << mana << " mana." << endl;
+  	cout << "It has " << h11 << " health.\n" << endl;
+  	
+  	cout << "What would you like to do?" << endl;
+  	cout << "1.Attack!\n2.Special attack(1 mana)!" << endl;
 
+  	cin >> choice;
+  	//character damage
+	srand(time(NULL));//so RNG does not repeat the same number 
+	int hsword = rand() %75 + 25;//excalibur
+	//enemy damage
+	srand(time(NULL));
+	int d11 = rand() %20 + 0;//snake 
+	//RNG Special attack
+	srand(time(NULL));
+	int spec = rand() %4 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int slash1 = rand() %5 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int slash2 = rand() %10 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int slash3 = rand() %10 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int slash4 = rand() %10 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int super = rand() %100 + 1;
+  	
+  		//start attack
+  		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
+  		sleep(1);
+  		cout << "You chose attack!" << endl;
+  		sleep(1);
+  		cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  		h11 -= hsword;//subtract health from enemy
+  		sleep(1);
+  		if (slash1 == 7) {
+  			sleep(1);
+  			cout << "You blinded the enemy with your holy light!" << endl;
+  			sleep(2);
+  			cout << "You attack while its blinded!" << endl;
+  			sleep(2);
+  			cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  			h11 -= hsword;//subtract health from enemy
+  				if (slash2 == 7) {
+  				sleep(2);
+  				cout << "Triple Hit!" << endl;
+  				sleep(2);
+  				cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  				h11 -= hsword;//subtract health from enemy
+  					if (slash3 == 7) {
+  					sleep(2);
+  					cout << "Quadruple Hit!" << endl;
+  					sleep(2);
+  					cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  					h11 -= hsword;//subtract health from enemy
+  						if (slash4 == 7) {
+  						sleep(2);
+  						cout << "Quintuple Hit!" << endl;
+  						sleep(2);
+  						cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  						h11 -= hsword;//subtract health from enemy
+  							if (h11 <= 0) {
+  								cout << "████▄     ▄   ▄███▄   █▄▄▄▄     █  █▀ ▄█ █    █     " << endl;
+  								cout << "█   █      █  █▀   ▀  █  ▄▀     █▄█   ██ █    █     " << endl;
+  								cout << "█   █ █     █ ██▄▄    █▀▀▌      █▀▄   ██ █    █     " << endl;
+  								cout << "▀████  █    █ █▄   ▄▀ █  █      █  █  ▐█ ███▄ ███▄  " << endl;
+  								cout << "        █  █  ▀███▀     █         █    ▐     ▀    ▀ " << endl;
+  								cout << "         █▐            ▀         ▀                  " << endl;
+  								cout << "         ▐                                          " << endl;
+  							}	
+  						}
+					}  				
+  				}
+  			}
+  			
+  		}//end attack
+  	
+  		//start special attack
+  		else {
+  		sleep(1);
+  		cout << "You use a special attack." << endl;
+  		sleep(1);
+  		
+  			//if there's not enough mana
+  				if (mana < 1) {
+  					cout << "You are all out of mana!" << endl;
+  				}
+  				
+  			//Hallowed blaze + 10 base damage
+  			if (spec == 1 && mana >= 1) {
+  			cout << "You used Hallowed Blaze!" << endl;
+  			h11 -= 50;
+  			sleep(1);
+  			cout << "You dealt 50 damage!" << endl;
+  			mana -= 1;
+  			}
+  			
+  			//Critical slash x2
+  			if (spec == 2 && mana >= 1) {
+  			cout << "You used Critical Smite!" << endl;
+  			h11 -= (hsword * 2);
+  			sleep(1);
+  			cout << "You dealt " << hsword * 2 << " damage!" << endl;
+  			mana -= 1;
+  			}
+  			
+  			//Divine infusion 10 + normal attack
+  			if (spec == 3 && mana >= 1) {
+  			cout << "You used Divine Infusion!" << endl;
+  			h11 -= 10;
+  			h11 -= hsword;
+  			sleep(1);
+  			cout << "You dealt " << hsword + 10 << " damage!" << endl;
+  			mana -= 1;
+  			}
+  			
+  			//Angelic Drain saps 20 hp
+  			if (spec == 4 && mana >= 1) {
+  			cout << "You used Angelic Drain!" << endl;
+  			h11 -= 20;
+  			health += 20;
+  			mana += 10;
+  			sleep(1);
+  			cout << "You sapped 20 health!" << endl;
+  			mana -= 1;
+  			}
+  			
+  			//Assassination
+  			if (super == 5 && mana >= 2) {
+  			cout << "Your Blade glows a Golden Yellow" << endl;
+  			h11 -= 200;
+  			health += 200;
+  			sleep(1);
+  			cout << "You dealt 200 damage!" << endl;
+  			mana -= 2;
+  			}
+  			
+  			
+  			sleep(1);
+  		}//end special attack
+  		
+  		cout << "You take " << d11 << " damage!\n\n\n\n\n" << endl;//damage taken
+  		health -= d11;
+  		
+  	sleep(2);
+  	if (health <= 0) {//starts death statement
+					cout << "   ▄██████▄     ▄████████   ▄▄▄▄███▄▄▄▄      ▄████████       ▄██████▄   ▄█    █▄     ▄████████    ▄████████ " << endl;
+					cout << "  ███    ███   ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███      ███    ███ ███    ███   ███    ███   ███    ███ " << endl;
+					cout << "  ███    █▀    ███    ███ ███   ███   ███   ███    █▀       ███    ███ ███    ███   ███    █▀    ███    ███ " << endl;
+					cout << " ▄███          ███    ███ ███   ███   ███  ▄███▄▄▄          ███    ███ ███    ███  ▄███▄▄▄      ▄███▄▄▄▄██▀ " << endl;
+					cout << "▀▀███ ████▄  ▀███████████ ███   ███   ███ ▀▀███▀▀▀          ███    ███ ███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   " << endl;
+					cout << "  ███    ███   ███    ███ ███   ███   ███   ███    █▄       ███    ███ ███    ███   ███    █▄  ▀███████████ " << endl;
+					cout << "  ███    ███   ███    ███ ███   ███   ███   ███    ███      ███    ███ ███    ███   ███    ███   ███    ███ " << endl;
+					cout << "  ████████▀    ███    █▀   ▀█   ███   █▀    ██████████       ▀██████▀   ▀██████▀    ██████████   ███    ███ " << endl;
+					return 0; }//ends death statement
+  	}//end fight
 
 //end second phase
-
+cout << "You slice off a section of the snake demon." << endl;
+sleep(2);
+cout << "The holy blade sucks the life force out of it." << endl;
+sleep(2);
+cout << "*Health up*" << endl;
+sleep(2);
+health += 100;
+cout << "Satan returns to his original form." << endl;
+sleep(2);
+cout << "He charges you with a devilish grin on his face." << endl;
+sleep(2);
 
 //start third phase
+while (h12 >= 1 && health >= 1) {
+    cout << "You have " << health << " health, and " << mana << " mana." << endl;
+  	cout << "It has " << h12 << " health.\n" << endl;
+  	
+  	cout << "What would you like to do?" << endl;
+  	cout << "1.Attack!\n2.Special attack(1 mana)!" << endl;
 
+  	cin >> choice;
+  	//character damage
+	srand(time(NULL));//so RNG does not repeat the same number 
+	int hsword = rand() %75 + 25;//excalibur
+	//enemy damage
+	srand(time(NULL));
+	int d12 = rand() %55 + 20;//final
+	//RNG Special attack
+	srand(time(NULL));
+	int spec = rand() %4 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int slash1 = rand() %5 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int slash2 = rand() %10 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int slash3 = rand() %10 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int slash4 = rand() %10 + 1;
+	//RNG Double Slash
+	srand(time(NULL));
+	int super = rand() %100 + 1;
+  	
+  		//start attack
+  		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
+  		sleep(1);
+  		cout << "You chose attack!" << endl;
+  		sleep(1);
+  		cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  		h12 -= hsword;//subtract health from enemy
+  		sleep(1);
+  		if (slash1 == 7) {
+  			sleep(1);
+  			cout << "You blinded the enemy with your holy light!" << endl;
+  			sleep(2);
+  			cout << "You attack while its blinded!" << endl;
+  			sleep(2);
+  			cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  			h12 -= hsword;//subtract health from enemy
+  				if (slash2 == 7) {
+  				sleep(2);
+  				cout << "Triple Hit!" << endl;
+  				sleep(2);
+  				cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  				h12 -= hsword;//subtract health from enemy
+  					if (slash3 == 7) {
+  					sleep(2);
+  					cout << "Quadruple Hit!" << endl;
+  					sleep(2);
+  					cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  					h12 -= hsword;//subtract health from enemy
+  						if (slash4 == 7) {
+  						sleep(2);
+  						cout << "Quintuple Hit!" << endl;
+  						sleep(2);
+  						cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
+  						h12 -= hsword;//subtract health from enemy
+  							if (h12 <= 0) {
+  								cout << "████▄     ▄   ▄███▄   █▄▄▄▄     █  █▀ ▄█ █    █     " << endl;
+  								cout << "█   █      █  █▀   ▀  █  ▄▀     █▄█   ██ █    █     " << endl;
+  								cout << "█   █ █     █ ██▄▄    █▀▀▌      █▀▄   ██ █    █     " << endl;
+  								cout << "▀████  █    █ █▄   ▄▀ █  █      █  █  ▐█ ███▄ ███▄  " << endl;
+  								cout << "        █  █  ▀███▀     █         █    ▐     ▀    ▀ " << endl;
+  								cout << "         █▐            ▀         ▀                  " << endl;
+  								cout << "         ▐                                          " << endl;
+  							}	
+  						}
+					}  				
+  				}
+  			}
+  			
+  		}//end attack
+  	
+  		//start special attack
+  		else {
+  		sleep(1);
+  		cout << "You use a special attack." << endl;
+  		sleep(1);
+  		
+  			//if there's not enough mana
+  				if (mana < 1) {
+  					cout << "You are all out of mana!" << endl;
+  				}
+  				
+  			//Hallowed blaze + 10 base damage
+  			if (spec == 1 && mana >= 1) {
+  			cout << "You used Hallowed Blaze!" << endl;
+  			h12 -= 50;
+  			sleep(1);
+  			cout << "You dealt 50 damage!" << endl;
+  			mana -= 1;
+  			}
+  			
+  			//Critical slash x2
+  			if (spec == 2 && mana >= 1) {
+  			cout << "You used Critical Smite!" << endl;
+  			h12 -= (hsword * 2);
+  			sleep(1);
+  			cout << "You dealt " << hsword * 2 << " damage!" << endl;
+  			mana -= 1;
+  			}
+  			
+  			//Divine infusion 10 + normal attack
+  			if (spec == 3 && mana >= 1) {
+  			cout << "You used Divine Infusion!" << endl;
+  			h12 -= 10;
+  			h12 -= hsword;
+  			sleep(1);
+  			cout << "You dealt " << hsword + 10 << " damage!" << endl;
+  			mana -= 1;
+  			}
+  			
+  			//Angelic Drain saps 20 hp
+  			if (spec == 4 && mana >= 1) {
+  			cout << "You used Angelic Drain!" << endl;
+  			h12 -= 20;
+  			health += 20;
+  			mana += 10;
+  			sleep(1);
+  			cout << "You sapped 20 health!" << endl;
+  			mana -= 1;
+  			}
+  			
+  			//Assassination
+  			if (super == 5 && mana >= 2) {
+  			cout << "Your Blade glows a Golden Yellow" << endl;
+  			h12 -= 200;
+  			health += 200;
+  			sleep(1);
+  			cout << "You dealt 200 damage!" << endl;
+  			mana -= 2;
+  			}
+  			
+  			
+  			sleep(1);
+  		}//end special attack
+  		
+  		cout << "You take " << d12 << " damage!\n\n\n\n\n" << endl;//damage taken
+  		health -= d12;
+  		
+  	sleep(2);
+  	if (health <= 0) {//starts death statement
+					cout << "   ▄██████▄     ▄████████   ▄▄▄▄███▄▄▄▄      ▄████████       ▄██████▄   ▄█    █▄     ▄████████    ▄████████ " << endl;
+					cout << "  ███    ███   ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███      ███    ███ ███    ███   ███    ███   ███    ███ " << endl;
+					cout << "  ███    █▀    ███    ███ ███   ███   ███   ███    █▀       ███    ███ ███    ███   ███    █▀    ███    ███ " << endl;
+					cout << " ▄███          ███    ███ ███   ███   ███  ▄███▄▄▄          ███    ███ ███    ███  ▄███▄▄▄      ▄███▄▄▄▄██▀ " << endl;
+					cout << "▀▀███ ████▄  ▀███████████ ███   ███   ███ ▀▀███▀▀▀          ███    ███ ███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   " << endl;
+					cout << "  ███    ███   ███    ███ ███   ███   ███   ███    █▄       ███    ███ ███    ███   ███    █▄  ▀███████████ " << endl;
+					cout << "  ███    ███   ███    ███ ███   ███   ███   ███    ███      ███    ███ ███    ███   ███    ███   ███    ███ " << endl;
+					cout << "  ████████▀    ███    █▀   ▀█   ███   █▀    ██████████       ▀██████▀   ▀██████▀    ██████████   ███    ███ " << endl;
+					return 0; }//ends death statement
+  	}//end fight
 //end third phase
-
-
-
-
+cout << "Light breaks through the roof of the chamber." << endl;
+sleep(2);
+cout << "It surrounds the excalibur." << endl;
+sleep(2);
+cout << "You charge forward stabbing satan directly in chest with your light infused blade." << endl;
+sleep(2);
+cout << "He stumbles back and explodes into a shower of ash." << endl;
+sleep(4);
+cout << "It's over." << endl;
+sleep(2);
 }//ends life statement
 
 return 0;            
