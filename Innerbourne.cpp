@@ -47,7 +47,7 @@ int main()
 	int h7 = 65;//Minotaur
 	int h8 = 150;//Hydra
 	int h9 = 200;//Sentinel 
-	int h9 = 200;//Inferno demon
+	int h10 = ;//Inferno demon
 cout << "Please enter your name." << endl;
 cin >> name;
 sleep(2);
@@ -1069,7 +1069,10 @@ while (h7 >= 1 && health >= 1) {//start minotaur fight
 					cout << "  ████████▀    ███    █▀   ▀█   ███   █▀    ██████████       ▀██████▀   ▀██████▀    ██████████   ███    ███ " << endl;
 					return 0; }//ends death statement
   			}//end minotaur attack
-
+sleep(2);
+cout << "You slay the minotaur and it drops a health potion." << endl;
+health += 100
+sleep(2);
 cout << "You venture further into the cave." << endl;
 sleep(2);
 cout << "As you come up to the next room you see something scratched on the wall." << endl;
