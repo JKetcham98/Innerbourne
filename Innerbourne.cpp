@@ -51,7 +51,7 @@ int main()
 	int h11 = 400;//Snake form
 	int h12 = 700;//final Satan form
 	
-cout << "Please enter your name." << endl;
+cout << "Please enter your name(no spaces)." << endl;
 cin >> name;
 if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//alt. mode
 cout << "Hard Mode Activated." << endl;
@@ -2225,6 +2225,9 @@ if (health >= 1 && health < 20) {
 cout << "Grade: F" << endl;
 sleep(2);
 cout << "Thanks for Playing" << endl;
+}
+if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {
+cout << "Nice, you beat hardmode!" << endl;
 }
 
 
