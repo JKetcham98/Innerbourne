@@ -50,9 +50,29 @@ int main()
 	int h10 = 200;//Inferno demon form
 	int h11 = 400;//Snake form
 	int h12 = 700;//final Satan form
+	
 cout << "Please enter your name." << endl;
 cin >> name;
-if (name == "213374u") {
+if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//alt. mode
+cout << "Hard Mode Activated." << endl;
+sleep(1);
+cout << "Enemies now have health regeneration" << endl;
+sleep(2);
+cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa.(Don't spam buttons)\n" << endl;
+sleep(3);
+cout << " ▄█  ███▄▄▄▄   ███▄▄▄▄      ▄████████    ▄████████      ▀█████████▄   ▄██████▄  ███    █▄     ▄████████ ███▄▄▄▄      ▄████████ " << endl;
+cout << "███  ███▀▀▀██▄ ███▀▀▀██▄   ███    ███   ███    ███        ███    ███ ███    ███ ███    ███   ███    ███ ███▀▀▀██▄   ███    ███ " << endl;
+cout << "███▌ ███   ███ ███   ███   ███    █▀    ███    ███        ███    ███ ███    ███ ███    ███   ███    ███ ███   ███   ███    █▀  " << endl;
+cout << "███▌ ███   ███ ███   ███  ▄███▄▄▄      ▄███▄▄▄▄██▀       ▄███▄▄▄██▀  ███    ███ ███    ███  ▄███▄▄▄▄██▀ ███   ███  ▄███▄▄▄     " << endl;
+cout << "███▌ ███   ███ ███   ███ ▀▀███▀▀▀     ▀▀███▀▀▀▀▀        ▀▀███▀▀▀██▄  ███    ███ ███    ███ ▀▀███▀▀▀▀▀   ███   ███ ▀▀███▀▀▀     " << endl;
+cout << "███  ███   ███ ███   ███   ███    █▄  ▀███████████        ███    ██▄ ███    ███ ███    ███ ▀███████████ ███   ███   ███    █▄  " << endl;
+cout << "███  ███   ███ ███   ███   ███    ███   ███    ███        ███    ███ ███    ███ ███    ███   ███    ███ ███   ███   ███    ███ " << endl;
+cout << "█▀    ▀█   █▀   ▀█   █▀    ██████████   ███    ███      ▄█████████▀   ▀██████▀  ████████▀    ███    ███  ▀█   █▀    ██████████ " << endl;  
+cout << "                                        ███    ███                                           ███    ███                        " << endl;
+sleep(3);
+}
+if (name == "213374u") {//cheat codes
 health += 1000;
 mana += 550;
 cout << "Activated." << endl;
@@ -71,7 +91,7 @@ cout << "█▀    ▀█   █▀   ▀█   █▀    ████████
 cout << "                                        ███    ███                                           ███    ███                        " << endl;
 sleep(3);
 }
-if (name == "Innerborune" || name == "innerborune" ) {
+if (name == "Innerborune" || name == "innerborune" ) {//easter egg
 cout << "Activated." << endl;
 sleep(2);
 cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
@@ -87,7 +107,7 @@ cout << "███  ███   ███ ███   ███   ███    �
 cout << "█▀    ▀█   █▀   ▀█   █▀    ██████████   ███    ███      ▄█████████▀   ▀██████▀    ███    ███ ████████▀   ▀█   █▀    ██████████ " << endl;
 cout << "                                        ███    ███                                ███    ███                                   " << endl;
 }
-else {
+else {//regular game
 sleep(2);
 cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 cout << "This is a game made by Joshua Ketcham and Vageesha Dharmadasa.(Don't spam buttons)\n" << endl;
@@ -118,7 +138,7 @@ if (health >= 1){//makes sure it ends when you die
 
 cout << "Read it?(y/n)" << endl;
 cin >> i1;
-	if (i1 == "y" || i1 == "yes" || i1 == "Yes" || i1 == "Y" ) {
+	if (i1 == "y" || i1 == "yes" || i1 == "Yes" || i1 == "Y" ) {//first choice
 	cout << "You read the note." << endl;
 	sleep(2);
 	cout << "It's a story, a few parts are missing" << endl;
@@ -161,7 +181,10 @@ cout << "As you head down the path you come across a slimy beast!" << endl;
 sleep(2);
 
 //Slime battle   
-  while (h1 >= 1 && health >= 1) {
+while (h1 >= 1 && health >= 1) {
+	if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//hard mode health regen
+		h1 += 2;
+	}
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h1 << " health.\n" << endl;
   	
@@ -178,6 +201,9 @@ sleep(2);
 	//RNG Special attack
 	srand(time(NULL));
 	int spec = rand() %4 + 1;
+	//Random health drain
+	srand(time(NULL));
+	int drain = rand() %10 + 5;
   	
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -228,13 +254,13 @@ sleep(2);
   			mana -= 1;
   			}
   			
-  			//Vitalic Drain saps 5 hp
+  			//Vitalic Drain saps hp
   			if (spec == 4 && mana >= 1) {
   			cout << "You used Vitalic Drain!" << endl;
-  			h1 -= 5;
-  			health += 5;
-  			sleep(1);
-  			cout << "You sapped 5 health!" << endl;
+  			h8 -= drain;
+  			health += drain;
+			sleep(1);
+  			cout << "You sapped " << drain << "health!" << endl;
   			mana -= 1;
   			}
   			
@@ -275,6 +301,9 @@ cin >> choice;
 	cout << "A goblin pounces out at you!" << endl;
 	sleep(2);
   	while (h2 >= 1 && health >= 1) {
+  	if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//hard mode health regen
+		h2 += 3;
+	}
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h2 << " health.\n" << endl;
   	
@@ -291,6 +320,9 @@ cin >> choice;
 	//RNG Special attack
 	srand(time(NULL));
 	int spec = rand() %4 + 1;
+	//Random health drain
+	srand(time(NULL));
+	int drain = rand() %10 + 5;
   	
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -341,13 +373,13 @@ cin >> choice;
   			mana -= 1;
   			}
   			
-  			//Vitalic Drain saps 5 hp
+  			//Vitalic Drain saps hp
   			if (spec == 4 && mana >= 1) {
   			cout << "You used Vitalic Drain!" << endl;
-  			h2 -= 5;
-  			health += 5;
-  			sleep(1);
-  			cout << "You sapped 5 health!" << endl;
+  			h8 -= drain;
+  			health += drain;
+			sleep(1);
+  			cout << "You sapped " << drain << "health!" << endl;
   			mana -= 1;
   			}
   			
@@ -378,8 +410,11 @@ cin >> choice;
 	//Skeleton battle 
 	else {  
  	cout << "A skeleton charges at you!" << endl;
- 	sleep(2);
- 	 while (h3 >= 1 && health >= 1) {
+ 	sleep(2);	
+ 	while (h3 >= 1 && health >= 1) {
+ 	if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//hard mode health regen
+		h3 += 3;
+	}
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h3 << " health.\n" << endl;
   	
@@ -396,6 +431,9 @@ cin >> choice;
 	//RNG Special attack
 	srand(time(NULL));
 	int spec = rand() %4 + 1;
+	//Random health drain
+	srand(time(NULL));
+	int drain = rand() %10 + 5;
   	
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -446,13 +484,13 @@ cin >> choice;
   			mana -= 1;
   			}
   			
-  			//Vitalic Drain saps 5 hp
+  			//Vitalic Drain saps hp
   			if (spec == 4 && mana >= 1) {
   			cout << "You used Vitalic Drain!" << endl;
-  			h3 -= 5;
-  			health += 5;
-  			sleep(1);
-  			cout << "You sapped 5 health!" << endl;
+  			h8 -= drain;
+  			health += drain;
+			sleep(1);
+  			cout << "You sapped " << drain << "health!" << endl;
   			mana -= 1;
   			}
   			
@@ -530,6 +568,9 @@ cin >> choice;
 		cout << "You pull out your dagger...." << endl;
 		}
 			while (h4 >= 1 && health >= 1) {//giant slime battle
+			if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//hard mode health regen
+				h4 += 4;
+			}
     			cout << "You have " << health << " health, and " << mana << " mana." << endl;
   				cout << "It has " << h4 << " health.\n" << endl;
   	
@@ -546,6 +587,9 @@ cin >> choice;
 				//RNG Special attack
 				srand(time(NULL));
 				int spec = rand() %4 + 1;
+				//Random health drain
+				srand(time(NULL));
+				int drain = rand() %10 + 5;
   	
   				//start attack
   				if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -596,13 +640,13 @@ cin >> choice;
   				mana -= 1;
   				}
   				
-  				//Vitalic Drain saps 5 hp
+				//Vitalic Drain saps hp
   				if (spec == 4 && mana >= 1) {
   				cout << "You used Vitalic Drain!" << endl;
-  				h4 -= 5;
-  				health += 5;
-  				sleep(1);
-  				cout << "You sapped 5 health!" << endl;
+  				h8 -= drain;
+  				health += drain;
+				sleep(1);
+  				cout << "You sapped " << drain << "health!" << endl;
   				mana -= 1;
   				}
   				
@@ -666,6 +710,9 @@ cin >> choice;
 			}
 sleep(2);
 while (h5 >= 1 && health >= 1) {//goblin chief attack
+	if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//hard mode health regen
+		h5 += 7;
+	}
     			cout << "You have " << health << " health, and " << mana << " mana." << endl;
   				cout << "It has " << h5 << " health.\n" << endl;
   	
@@ -685,6 +732,9 @@ while (h5 >= 1 && health >= 1) {//goblin chief attack
 				//RNG Special attack
 				srand(time(NULL));
 				int spec = rand() %4 + 1;
+				//Random health drain
+				srand(time(NULL));
+				int drain = rand() %15 + 5;
   	
   				//start attack
   				if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -764,13 +814,13 @@ while (h5 >= 1 && health >= 1) {//goblin chief attack
 					} 				
   				}
   				
-  				//Vitalic Drain saps 5 hp
+  				//Vitalic Drain saps hp
   				if (spec == 4 && mana >= 1) {
   				cout << "You used Vitalic Drain!" << endl;
-  				h5 -= 5;
-  				health += 5;
+  				h8 -= drain;
+  				health += drain;
   				sleep(1);
-  				cout << "You sapped 5 health!" << endl;
+  				cout << "You sapped " << drain << "health!" << endl;
   				mana -= 1;
   				}
   				
@@ -847,6 +897,9 @@ if (s3 == 1) {
 	sleep(2);
 	}
 while (h6 >= 1 && health >= 1) {//giant troll attack
+	if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//hard mode health regen
+		h6 += 8;
+	}
     			cout << "You have " << health << " health, and " << mana << " mana." << endl;
   				cout << "It has " << h6 << " health.\n" << endl;
   	
@@ -866,6 +919,9 @@ while (h6 >= 1 && health >= 1) {//giant troll attack
 				//RNG Special attack
 				srand(time(NULL));
 				int spec = rand() %4 + 1;
+				//Random health drain
+				srand(time(NULL));
+				int drain = rand() %20 + 10;
   	
   				//start attack
   				if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -945,13 +1001,13 @@ while (h6 >= 1 && health >= 1) {//giant troll attack
 					} 				
   				}
   				
-  				//Vitalic Drain saps 5 hp
+  				//Vitalic Drain saps hp
   				if (spec == 4 && mana >= 1) {
   				cout << "You used Vitalic Drain!" << endl;
-  				h6 -= 5;
-  				health += 5;
+  				h6 -= drain;
+  				health += drain;
   				sleep(1);
-  				cout << "You sapped 5 health!" << endl;
+  				cout << "You sapped " << drain << "health!" << endl;
   				mana -= 1;
   				}
   				
@@ -992,6 +1048,9 @@ cout << "You find a raging minotaur!\n" << endl;
 sleep(3);
 
 while (h7 >= 1 && health >= 1) {//start minotaur fight
+	if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//hard mode health regen
+		h7 += 10;
+	}
     			cout << "You have " << health << " health, and " << mana << " mana." << endl;
   				cout << "It has " << h7 << " health.\n" << endl;
   	
@@ -1011,6 +1070,9 @@ while (h7 >= 1 && health >= 1) {//start minotaur fight
 				//RNG Special attack
 				srand(time(NULL));
 				int spec = rand() %4 + 1;
+				//Random health drain
+				srand(time(NULL));
+				int drain = rand() %20 + 10;
   	
   				//start attack
   				if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -1090,13 +1152,13 @@ while (h7 >= 1 && health >= 1) {//start minotaur fight
 					} 				
   				}
   				
-  				//Vitalic Drain saps 5 hp
+  				//Vitalic Drain saps hp
   				if (spec == 4 && mana >= 1) {
   				cout << "You used Vitalic Drain!" << endl;
-  				h7 -= 10;
-  				health += 10;
+  				h8 -= drain;
+  				health += drain;
   				sleep(1);
-  				cout << "You sapped 10 health!" << endl;
+  				cout << "You sapped " << drain << "health!" << endl;
   				mana -= 1;
   				}
   				
@@ -1201,6 +1263,9 @@ cout << "Its a Hydra!" << endl;
 sleep(2);
 //start Hydra fight
 while (h8 >= 1 && health >= 1) {
+	if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//hard mode health regen
+		h8 += 12;
+	}
     			cout << "You have " << health << " health, and " << mana << " mana." << endl;
   				cout << "It has " << h8 << " health.\n" << endl;
   	
@@ -1220,6 +1285,9 @@ while (h8 >= 1 && health >= 1) {
 				//RNG Special attack
 				srand(time(NULL));
 				int spec = rand() %4 + 1;
+				//Random health drain
+				srand(time(NULL));
+				int drain = rand() %20 + 10;
   	
   				//start attack
   				if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -1299,13 +1367,13 @@ while (h8 >= 1 && health >= 1) {
 					} 				
   				}
   				
-  				//Vitalic Drain saps 10 hp
+  				//Vitalic Drain saps hp
   				if (spec == 4 && mana >= 1) {
   				cout << "You used Vitalic Drain!" << endl;
-  				h8 -= 10;
-  				health += 10;
+  				h8 -= drain;
+  				health += drain;
   				sleep(1);
-  				cout << "You sapped 10 health!" << endl;
+  				cout << "You sapped " << drain << "health!" << endl;
   				mana -= 1;
   				}
   				
@@ -1380,6 +1448,9 @@ sleep(2);
 cout << "You take out excalibur, eager for a test run" << endl;
 sleep(2);
 while (h9 >= 1 && health >= 1) {
+	if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//hard mode health regen
+		h9 += 30;
+	}
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h9 << " health.\n" << endl;
   	
@@ -1411,6 +1482,9 @@ while (h9 >= 1 && health >= 1) {
 	//RNG Double Slash
 	srand(time(NULL));
 	int super = rand() %100 + 1;
+	//Random health drain
+	srand(time(NULL));
+	int drain = rand() %30 + 20;
   	
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -1420,7 +1494,7 @@ while (h9 >= 1 && health >= 1) {
   		cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
   		h9 -= hsword;//subtract health from enemy
   		sleep(1);
-  		if (slash1 == 7) {
+  		if (slash1 == 3) {
   			sleep(1);
   			cout << "You blinded the enemy with your holy light!" << endl;
   			sleep(2);
@@ -1501,14 +1575,14 @@ while (h9 >= 1 && health >= 1) {
   			mana -= 1;
   			}
   			
-  			//Angelic Drain saps 20 hp
+  			//Angelic Drain saps hp
   			if (spec == 4 && mana >= 1) {
   			cout << "You used Angelic Drain!" << endl;
-  			h9 -= 20;
-  			health += 20;
+  			h12 -= drain;
+  			health += drain;
   			mana += 10;
   			sleep(1);
-  			cout << "You sapped 20 health!" << endl;
+  			cout << "You sapped " << drain << "health!" << endl;
   			mana -= 1;
   			}
   			
@@ -1578,6 +1652,9 @@ sleep(2);
 
 //start first fight phase
 while (h10 >= 1 && health >= 1) {
+	if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//hard mode health regen
+		h10 += 45;
+	}
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h10 << " health.\n" << endl;
   	
@@ -1609,6 +1686,9 @@ while (h10 >= 1 && health >= 1) {
 	//RNG Double Slash
 	srand(time(NULL));
 	int super = rand() %100 + 1;
+	//Random health drain
+	srand(time(NULL));
+	int drain = rand() %30 + 20;
   	
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -1618,7 +1698,7 @@ while (h10 >= 1 && health >= 1) {
   		cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
   		h10 -= hsword;//subtract health from enemy
   		sleep(1);
-  		if (slash1 == 7) {
+  		if (slash1 == 3) {
   			sleep(1);
   			cout << "You blinded the enemy with your holy light!" << endl;
   			sleep(2);
@@ -1699,14 +1779,14 @@ while (h10 >= 1 && health >= 1) {
   			mana -= 1;
   			}
   			
-  			//Angelic Drain saps 20 hp
+  			//Angelic Drain saps hp
   			if (spec == 4 && mana >= 1) {
   			cout << "You used Angelic Drain!" << endl;
-  			h10 -= 20;
-  			health += 20;
+  			h12 -= drain;
+  			health += drain;
   			mana += 10;
   			sleep(1);
-  			cout << "You sapped 20 health!" << endl;
+  			cout << "You sapped " << drain << "health!" << endl;
   			mana -= 1;
   			}
   			
@@ -1748,6 +1828,9 @@ sleep(2);
 
 //start second phase
 while (h11 >= 1 && health >= 1) {
+	if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//hard mode health regen
+		h11 += 45;
+	}
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h11 << " health.\n" << endl;
   	
@@ -1779,6 +1862,9 @@ while (h11 >= 1 && health >= 1) {
 	//RNG Double Slash
 	srand(time(NULL));
 	int super = rand() %100 + 1;
+	//Random health drain
+	srand(time(NULL));
+	int drain = rand() %30 + 20;
   	
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -1788,7 +1874,7 @@ while (h11 >= 1 && health >= 1) {
   		cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
   		h11 -= hsword;//subtract health from enemy
   		sleep(1);
-  		if (slash1 == 7) {
+  		if (slash1 == 3) {
   			sleep(1);
   			cout << "You blinded the enemy with your holy light!" << endl;
   			sleep(2);
@@ -1869,14 +1955,14 @@ while (h11 >= 1 && health >= 1) {
   			mana -= 1;
   			}
   			
-  			//Angelic Drain saps 20 hp
+  			//Angelic Drain saps hp
   			if (spec == 4 && mana >= 1) {
   			cout << "You used Angelic Drain!" << endl;
-  			h11 -= 20;
-  			health += 20;
+  			h12 -= drain;
+  			health += drain;
   			mana += 10;
   			sleep(1);
-  			cout << "You sapped 20 health!" << endl;
+  			cout << "You sapped " << drain << "health!" << endl;
   			mana -= 1;
   			}
   			
@@ -1925,6 +2011,9 @@ sleep(2);
 
 //start third phase
 while (h12 >= 1 && health >= 1) {
+	if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//hard mode health regen
+		h12 += 60;
+	}
     cout << "You have " << health << " health, and " << mana << " mana." << endl;
   	cout << "It has " << h12 << " health.\n" << endl;
   	
@@ -1956,6 +2045,9 @@ while (h12 >= 1 && health >= 1) {
 	//RNG Double Slash
 	srand(time(NULL));
 	int super = rand() %100 + 1;
+	//Random health drain
+	srand(time(NULL));
+	int drain = rand() %30 + 20;
   	
   		//start attack
   		if (choice == "1" || choice == "1." || choice == "attack" || choice == "Attack" || choice == "Attack!" || choice == "attack!" || choice == "1.Attack!") {
@@ -1973,7 +2065,7 @@ while (h12 >= 1 && health >= 1) {
   			sleep(2);
   			cout << "\nYou deal " << hsword << " damage!" << endl;//damage dealt statement
   			h12 -= hsword;//subtract health from enemy
-  				if (slash2 == 7) {
+  				if (slash2 == 3) {
   				sleep(2);
   				cout << "Triple Hit!" << endl;
   				sleep(2);
@@ -2046,14 +2138,14 @@ while (h12 >= 1 && health >= 1) {
   			mana -= 1;
   			}
   			
-  			//Angelic Drain saps 20 hp
+  			//Angelic Drain saps hp
   			if (spec == 4 && mana >= 1) {
   			cout << "You used Angelic Drain!" << endl;
-  			h12 -= 20;
-  			health += 20;
+  			h12 -= drain;
+  			health += drain;
   			mana += 10;
   			sleep(1);
-  			cout << "You sapped 20 health!" << endl;
+  			cout << "You sapped " << drain << "health!" << endl;
   			mana -= 1;
   			}
   			
@@ -2091,12 +2183,51 @@ cout << "Light breaks through the roof of the chamber." << endl;
 sleep(2);
 cout << "It surrounds the excalibur." << endl;
 sleep(2);
-cout << "You charge forward stabbing satan directly in chest with your light infused blade." << endl;
+cout << "You charge forward, stabbing satan directly in chest with your light infused blade." << endl;
 sleep(2);
 cout << "He stumbles back and explodes into a shower of ash." << endl;
 sleep(4);
 cout << "It's over." << endl;
+sleep(8);
+cout << "\n\n\n\n\nEnd Game Statistics" << endl;
 sleep(2);
+if (health >= 200) {//"Grading" system
+cout << "Grade: A+" << endl;
+sleep(2);
+cout << "Thanks for Playing" << endl;
+}
+if (health >= 150) {
+cout << "Grade: A" << endl;
+sleep(2);
+cout << "Thanks for Playing" << endl;
+}
+if (health >= 100) {
+cout << "Grade: B+" << endl;
+sleep(2);
+cout << "Thanks for Playing" << endl;
+}
+if (health >= 80) {
+cout << "Grade: B" << endl;
+sleep(2);
+cout << "Thanks for Playing" << endl;
+}
+if (health >= 50) {
+cout << "Grade: C" << endl;
+sleep(2);
+cout << "Thanks for Playing" << endl;
+}
+if (health >= 20) {
+cout << "Grade: D" << endl;
+sleep(2);
+cout << "Thanks for Playing" << endl;
+}
+if (health >= 1) {
+cout << "Grade: F" << endl;
+sleep(2);
+cout << "Thanks for Playing" << endl;
+}
+
+
 }//ends life statement
 
 return 0;            
