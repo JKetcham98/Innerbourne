@@ -2196,32 +2196,32 @@ cout << "Grade: A+" << endl;
 sleep(2);
 cout << "Thanks for Playing" << endl;
 }
-if (health >= 150) {
+if (health >= 150 && health < 200) {
 cout << "Grade: A" << endl;
 sleep(2);
 cout << "Thanks for Playing" << endl;
 }
-if (health >= 100) {
+if (health >= 100 && health < 150) {
 cout << "Grade: B+" << endl;
 sleep(2);
 cout << "Thanks for Playing" << endl;
 }
-if (health >= 80) {
+if (health >= 80 && health < 100) {
 cout << "Grade: B" << endl;
 sleep(2);
 cout << "Thanks for Playing" << endl;
 }
-if (health >= 50) {
+if (health >= 50 && health < 80) {
 cout << "Grade: C" << endl;
 sleep(2);
 cout << "Thanks for Playing" << endl;
 }
-if (health >= 20) {
+if (health >= 20 && health < 50) {
 cout << "Grade: D" << endl;
 sleep(2);
 cout << "Thanks for Playing" << endl;
 }
-if (health >= 1) {
+if (health >= 1 && health < 20) {
 cout << "Grade: F" << endl;
 sleep(2);
 cout << "Thanks for Playing" << endl;
