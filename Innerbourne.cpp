@@ -566,7 +566,7 @@ cin >> choice;
 		cout << "You try and escape but the slime blocks the exit" << endl;
 		sleep(2);
 		cout << "You pull out your dagger...." << endl;
-		}
+		
 			while (h4 >= 1 && health >= 1) {//giant slime battle
 			if (name == "hardmode" || name == "Hardmode" || name == "Hard Mode" || name == "hard mode") {//hard mode health regen
 				h4 += 4;
@@ -690,6 +690,7 @@ cin >> choice;
 			}
 		cout << "You walk back to the place where the tunnel splits" << endl;
 		sleep(2);
+		}
 	if (choice == "right" || choice == "Right" || choice == "r" || choice == "Right." || choice == "right.") {
 		cout << "You take a right" << endl;
 		sleep(2);
